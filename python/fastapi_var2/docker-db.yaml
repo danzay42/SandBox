@@ -1,0 +1,15 @@
+version: '3'
+services:
+  db:
+    image: postgres:latest
+    # restart: always
+    ports:
+      - 5432:5432
+    volumes: 
+      - ./data:/var/lib/postgres/data
+    # env_file:
+    #   - .env
+    environment:
+      POSTGRES_USER: fastapi_user
+      POSTGRES_PASSWORD: fastapi_user
+      POSTGRES_DB: fastapi_docker_db

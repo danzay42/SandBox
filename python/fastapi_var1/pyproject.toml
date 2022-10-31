@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "fast-api-example"
+version = "0.1.0"
+description = ""
+authors = ["Daniil Zaytsev <zdanil34@gmail.com>"]
+readme = "README.md"
+packages = [{include = "fast_api_example"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.85.1"
+uvicorn = "^0.19.0"
+SQLAlchemy = "^1.4.42"
+psycopg2 = "^2.9.4"
+python-dotenv = "^0.21.0"
+passlib = "^1.7.4"
+python-jose = "^3.3.0"
+python-multipart = "^0.0.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
