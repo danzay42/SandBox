@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="descriotion" content="This is html tutorial">
+    <meta name="details" content="https://developer.mozilla.org/en-US/">
+    <title>Html tutorial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Body Scheme:</h1>
+    <p> |<br>
+        |-> header<br>
+        | . . . . |-> nav<br>
+        |<br>
+        |-> main<br>
+        | . . . . |-> article<br>
+        | . . . . | . . . . |-> section<br>
+        | . . . . | . . . . | . . . . |-> aside<br>
+        |<br>
+        |-> footer<br>
+    </p>
+
+    <hr/>
+    <h1>Headers:</h1>
+    <!-- <h1>[h1] header</h1>
+    <h2>[h2] header</h2>
+    <h3>[h3] header</h3> -->
+    <h4>[h4] header</h4>
+    <h5>[h5] header</h5>
+    <h6>[h6] header</h6>
+    <hr/>
+    
+    <h1>Paragraph:</h1>
+    <p style="border: 1px solid;">
+        A paragraph (from Ancient Greek παράγραφος (parágraphos) 'to write beside') is a self-contained unit of discourse in writing dealing with a particular point or idea. Though not required by the orthographic conventions of any language with a writing system, paragraphs are a conventional means of organizing extended segments of prose.
+    </p>
+    <hr/>
+    
+    <h1>Text features:</h1>
+    <p>
+        <b>bold</b> <i>curve</i> <b><i>both</i></b> [ b -> strong; i -> eml ] <br> 
+        <small>small</small> tag and <big>big - [depricated]</big> tag(use font-size)<br>
+        index_example: i<sup>top</sup>, i<sub>bottom</sub><br>
+    </p>
+    <hr/>
+    
+    <h1>Comments:</h1>
+    <!-- Comment section -->
+    <hr/>
+    
+    <h1>Style:</h1>
+        <!-- element style -->
+        <p style="color: blue;">Element style</p>
+        <!-- style element -->
+        <style>.p_class {color: red;}</style>
+        <p class="p_class">Style element</p>
+        <!-- for global style use: stylesheet link  -->
+        <!-- <link rel="stylesheet" href="style.css"> -->
+    <hr/>
+
+    <h1>Links:</h1>
+    <p>
+        External links:<br>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">link for detail info (open in this tab)</a><br>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" target="_blank">link for detail info (open in new tab)</a><br>
+        Internal links: <br>
+        <a href="page.html">move to my page</a><br>
+        <a href="kot.jpg" target="_blank">KOT</a>
+    </p>
+    <hr/>
+
+    <h1>Media:</h1>
+    <a href="https://upload.wikimedia.org/wikipedia/commons/4/4d/Cat_November_2010-1a.jpg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Cat_November_2010-1a.jpg" alt="image1 not found, ehe...">
+    </a>
+    <img src="kot.jpg" alt="image2 not found, ehe...">
+    <iframe height="150" src="https://www.youtube.com/embed/pQN-pnXPaVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <video src="sample-5s.mp4" poster="https://image.shutterstock.com/image-vector/grunge-red-preview-word-square-600w-773175091.jpg" controls loop autoplay muted></video>
+    <hr/>
+
+    <h1>Lists:</h1>
+    <p>
+        <ul>
+            <li>fruit</li>
+            <li>another fruit</li>
+            <li>some fruit</li>
+        </ul>
+        <ol type="1">
+            <li>first</li>
+            <li>second</li>
+            <li>third</li>
+        </ol>
+        <dl>
+            <dt>something</dt>
+            <dd>description of something</dd>
+            <dt>anotherthing</dt>
+            <dd>description of anotherthing</dd>
+        </dl>
+    </p>
+    <hr>
+
+    <h1>Tables:</h1>
+    <p>
+        <table>
+            <thead>
+                <caption><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">Caption</a></caption>
+                <th>column_one</th><th>column_two</th><th>column_three</th>
+            </thead>
+            <tbody>
+                <tr><td colspan="2">1-1 and 1-2</td><td>1-3</td></tr>
+                <tr><td rowspan="2">2-1 and 3-1</td><td>2-2</td><td>2-3</td></tr>
+                <tr><td>3-2</td><td>3-3</td></tr>
+            </tbody>
+            <tfoot>
+                <tr><td>foot_one</td><td>foot_two</td><td>foot_three</td></tr>
+            </tfoot>
+        </table>
+    </p>
+    <hr>
+
+    <h1>Div and Span:</h1>
+        <p>
+            span - inline elemen <br>
+            div - block elemen
+        </p>
+        <span style="border: 1px solid;">span_1</span>
+        <span>span_2</span>
+        <div id="custom_id" class="custom_class" style="border: 1px solid;">div_1</div><div>div_2</div>
+    <hr>
+
+    <h1>Input:</h1> 
+    <form action="">
+        <input type="text" placeholder="text">
+        <input type="password" placeholder="pass">
+        <input type="date">
+        <input type="email">
+        <input type="file">
+        <input type="range">
+        <input type="radio" name="rb">
+        <input type="radio" name="rb">
+        <input type="checkbox">
+        <input type="submit">
+        <br><textarea name="textarea" id="" cols="30" rows="3">this is textarea</textarea>
+    </form>
+    <hr>
+
+    <h1>Alignment</h1>
+    <a href="alignment.html">example</a>
+</body>
+</html>

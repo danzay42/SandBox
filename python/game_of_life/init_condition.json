@@ -1,0 +1,10 @@
+{
+    "length": 20,
+    "height": 20,
+    "depth": 1,
+    "cycles": null,
+    "borders": [0, 0], 
+
+    "init_points": null,
+    "random": false
+}

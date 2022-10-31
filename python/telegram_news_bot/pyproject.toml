@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "newsbot"
+version = "0.1.0"
+description = ""
+authors = ["Daniil Zaytsev <zdanil34@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+aiogram = "^2.23.1"
+psycopg = {extras = ["binary"], version = "^3.1.4"}
+SQLAlchemy = "^1.4.45"
+psycopg2-binary = "^2.9.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

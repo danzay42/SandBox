@@ -1,0 +1,6 @@
+*.docx
+*.sqlite3
+*.txt
+*.zip
+.venv
+.*_cache

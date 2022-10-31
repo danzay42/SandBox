@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "flashlight"
+version = "0.1.1"
+description = ""
+authors = ["Daniil Zaytsev <zdanil34@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+flashlight = "flashlight.main:run"

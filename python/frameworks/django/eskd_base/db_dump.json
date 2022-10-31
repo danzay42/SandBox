@@ -1,0 +1,154 @@
+[
+{
+ "model": "drf_api.user",
+ "pk": "1832b82e-33a7-41da-93f3-796cd92a181f",
+ "fields": {
+  "password": "dz",
+  "last_login": null,
+  "is_superuser": false,
+  "username": "user_1",
+  "first_name": "User",
+  "last_name": "One",
+  "email": "user_one@mail.com",
+  "is_staff": false,
+  "is_active": true,
+  "date_joined": "2022-10-11T11:22:47Z",
+  "patronymic": "",
+  "groups": [],
+  "user_permissions": [],
+  "projects": []
+ }
+},
+{
+ "model": "drf_api.user",
+ "pk": "3786d17c-e145-469b-b686-2f201f8e7442",
+ "fields": {
+  "password": "pbkdf2_sha256$390000$613Kp1rF9uFsKSbOaz0oTD$7h07Odt5cdTxJC2bo3jh5VbzMPvBlbkbfqULh8rv32Y=",
+  "last_login": "2022-10-15T08:04:44.916Z",
+  "is_superuser": true,
+  "username": "dz",
+  "first_name": "Daniil",
+  "last_name": "Zaytsev",
+  "email": "dz@mail.ru",
+  "is_staff": true,
+  "is_active": true,
+  "date_joined": "2022-10-11T10:59:44Z",
+  "patronymic": "Aleksandrovich",
+  "groups": [],
+  "user_permissions": [],
+  "projects": [
+   1
+  ]
+ }
+},
+{
+ "model": "drf_api.user",
+ "pk": "89e3ccc6-e2e2-46a2-abdf-81c9593c019a",
+ "fields": {
+  "password": "user_2",
+  "last_login": null,
+  "is_superuser": false,
+  "username": "user_2",
+  "first_name": "User",
+  "last_name": "Two",
+  "email": "user_2@mail.com",
+  "is_staff": false,
+  "is_active": true,
+  "date_joined": "2022-10-11T11:23:31Z",
+  "patronymic": "",
+  "groups": [],
+  "user_permissions": [],
+  "projects": []
+ }
+},
+{
+ "model": "drf_api.user",
+ "pk": "d999fe4d-afa3-4fce-af61-1a1438c0cf0f",
+ "fields": {
+  "password": "user_3",
+  "last_login": null,
+  "is_superuser": false,
+  "username": "user_3",
+  "first_name": "Даниил",
+  "last_name": "Зайцев",
+  "email": "user_3@mail.com",
+  "is_staff": false,
+  "is_active": true,
+  "date_joined": "2022-10-11T11:21:38Z",
+  "patronymic": "Александрович",
+  "groups": [],
+  "user_permissions": [],
+  "projects": []
+ }
+},
+{
+ "model": "drf_api.project",
+ "pk": 1,
+ "fields": {
+  "title": "Project_1"
+ }
+},
+{
+ "model": "drf_api.project",
+ "pk": 2,
+ "fields": {
+  "title": "Project_2"
+ }
+},
+{
+ "model": "drf_api.blueprint",
+ "pk": 1,
+ "fields": {
+  "title": "Изделие_1",
+  "file": "blueprints/README.md",
+  "decimal_number": "АБВГ.123456.789",
+  "origin": null,
+  "author_id": "d999fe4d-afa3-4fce-af61-1a1438c0cf0f",
+  "created": "2022-10-11T11:25:52.268Z",
+  "updated": "2022-10-11T11:25:52.268Z",
+  "projects": [1]
+ }
+},
+{
+ "model": "drf_api.blueprint",
+ "pk": 2,
+ "fields": {
+  "title": "Изделие_2",
+  "file": "blueprints/README-server.md",
+  "decimal_number": "АБВГ.123456.789-123",
+  "origin": 1,
+  "author_id": "3786d17c-e145-469b-b686-2f201f8e7442",
+  "created": "2022-10-11T11:26:38.636Z",
+  "updated": "2022-10-11T11:26:38.637Z",
+  "projects": [1,2]
+ }
+},
+{
+ "model": "drf_api.blueprint",
+ "pk": 3,
+ "fields": {
+  "title": "Blueprint_3",
+  "file": "blueprints/README-server_ty2EFWg.md",
+  "decimal_number": "ABCD.123456.789",
+  "origin": null,
+  "author_id": "1832b82e-33a7-41da-93f3-796cd92a181f",
+  "created": "2022-10-11T11:27:25.847Z",
+  "updated": "2022-10-11T11:27:25.848Z",
+  "projects": []
+ }
+},
+{
+ "model": "drf_api.blueprint",
+ "pk": 4,
+ "fields": {
+  "title": "Blueprint_4",
+  "file": "blueprints/README_3YJXju8.md",
+  "decimal_number": "ABCD.123456.789-123",
+  "origin": 3,
+  "author_id": "89e3ccc6-e2e2-46a2-abdf-81c9593c019a",
+  "created": "2022-10-11T11:27:47.969Z",
+  "updated": "2022-10-11T11:27:47.969Z",
+  "projects": []
+ }
+}
+]

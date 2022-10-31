@@ -1,0 +1,70 @@
+// Паттерн Фабричный метод применим тогда, когда в программе
+// есть иерархия классов продуктов.
+interface Button is
+    method render()
+    method onClick(f)
+
+class WindowsButton implements Button is
+    method render(a, b) is
+        // Отрисовать кнопку в стиле Windows.
+    method onClick(f) is
+        // Навесить на кнопку обработчик событий Windows.
+
+class HTMLButton implements Button is
+    method render(a, b) is
+        // Вернуть HTML-код кнопки.
+    method onClick(f) is
+        // Навесить на кнопку обработчик события браузера.
+
+
+// Базовый класс фабрики. Заметьте, что "фабрика" — это всего
+// лишь дополнительная роль для класса. Скорее всего, он уже
+// имеет какую-то бизнес-логику, в которой требуется создание
+// разнообразных продуктов.
+class Dialog is
+    method render() is
+        // Чтобы использовать фабричный метод, вы должны
+        // убедиться в том, что эта бизнес-логика не зависит от
+        // конкретных классов продуктов. Button — это общий
+        // интерфейс кнопок, поэтому все хорошо.
+        Button okButton = createButton()
+        okButton.onClick(closeDialog)
+        okButton.render()
+
+    // Мы выносим весь код создания продуктов в особый метод,
+    // который назвают "фабричным".
+    abstract method createButton():Button
+
+
+// Конкретные фабрики переопределяют фабричный метод и
+// возвращают из него собственные продукты.
+class WindowsDialog extends Dialog is
+    method createButton():Button is
+        return new WindowsButton()
+
+class WebDialog extends Dialog is
+    method createButton():Button is
+        return new HTMLButton()
+
+
+class Application is
+    field dialog: Dialog
+
+    // Приложение создаёт определённую фабрику в зависимости от
+    // конфигурации или окружения.
+    method initialize() is
+        config = readApplicationConfigFile()
+
+        if (config.OS == "Windows") then
+            dialog = new WindowsDialog()
+        else if (config.OS == "Web") then
+            dialog = new WebDialog()
+        else
+            throw new Exception("Error! Unknown operating system.")
+
+    // Если весь остальной клиентский код работает с фабриками и
+    // продуктами только через общий интерфейс, то для него
+    // будет не важно, какая фабрика была создана изначально.
+    method main() is
+        this.initialize()
+        dialog.render()

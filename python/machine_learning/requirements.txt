@@ -1,0 +1,4 @@
+numpy
+matplotlib
+tensorflow
+data-science-types

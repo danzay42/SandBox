@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "geo"
+version = "0.2.1"
+description = ""
+authors = ["Daniil Zaytsev <zdanil34@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.88.0"
+uvicorn = "^0.20.0"
+pytz = "^2022.7"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.2.0"
+flake8 = "^6.0.0"
+mypy = "^0.991"
+tox = "^4.2.8"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = ["tests",]
+
+[tool.mypy]
+# mypy_path = "src"
+check_untyped_defs = true
+disallow_any_generics = true
+ignore_missing_imports = true
+no_implicit_optional = true
+show_error_codes = true
+strict_equality = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_configs = true
+no_implicit_reexport = true
+
+[tool.flake8]
+max-line-length = 10
+ignore = ['E302', 'F821']
+
+[tool.tox]
+isolated_build = true
+envlist = ['py310', 'py311']
+
