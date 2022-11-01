@@ -22,24 +22,4 @@ async def get_currnet_user(users: UserRepository = Depends(get_user_repository),
                 return user
     
     raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Credentials aren't valid")
-
-
-# async def get_currnet_user(
-#     users: UserRepository = Depends(get_user_repository),
-#     token: str = Depends(JWTBearer)) -> User:
     
-#     cred_exception = HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Credential are not valid")
-
-#     payload = decode_access_token(token)
-#     if payload is None:
-#         raise cred_exception
-    
-#     email: str = payload.get("sub")
-#     if email is None:
-#         raise cred_exception
-    
-#     user = await users.get_by_email(email)
-#     if user is None:
-#         return cred_exception
-
-#     return user
