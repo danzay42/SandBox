@@ -1,0 +1,14 @@
+[Unit]
+Description=Demo Fastapi service
+After=network.terget
+
+[Service]
+User=dz
+Group=dz
+WorkingDirectory=/home/dz/Documents/Sandbox/python/fastapi_var2/
+Environment="PATH=/home/dz/.cache/pypoetry/virtualenvs/fast-api-2-oaEcBjQR-py3.10/bin"
+EnvironmentFile=/home/dz/Documents/Sandbox/python/fastapi_var2/.env
+ExecStart=/home/dz/.cache/pypoetry/virtualenvs/fast-api-2-oaEcBjQR-py3.10/bin/gunicorn -w 9 -k uvicorn.workers.UvicornWorker app.main:app --bind localhost:8000
+
+[Install]
+WantedBy=multi-user.target
