@@ -5,8 +5,7 @@ O = 0
 
 def merge_sort(data: list[int]) -> list[int]:
     """
-    total = O(n*log2(n))
-    current = O(log2(n))
+    O(n*log2(n))
     """
     if len(data) <= 1:
         return data
@@ -20,7 +19,7 @@ def merge_sort(data: list[int]) -> list[int]:
 
 def merge_v1(data_l: list[int], data_r: list[int]):
     """
-    current = O(n)
+    O(n)
     """
     global O
     sorted_data = []
@@ -42,7 +41,7 @@ def merge_v1(data_l: list[int], data_r: list[int]):
 
 def merge_v2(data_l: list[int], data_r: list[int]):
     """
-    current = O(n)
+    O(n)
     """
     global O
     sorted_data = []

@@ -25,7 +25,7 @@ fn example_4() {
     println!("{s}");
     let r1 = &mut s;
     // let r2 = &mut s;  // error: only ONE mutable reference (&mut) can exist 
-    // println!("r1={r1}, r2={r2}");
+    println!("r1={r1}");
 
     let s = String::from("some string");
     let r1 = &s;

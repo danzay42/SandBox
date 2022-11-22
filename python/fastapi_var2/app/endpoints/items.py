@@ -11,7 +11,8 @@ router = APIRouter()
 async def all(
     limit: int = 10,
     skip: int = 0,
-    items: ItemsRepository = Depends(get_item_repository)):
+    items: ItemsRepository = Depends(get_item_repository)
+):
     return await items.read(limit=limit, skip=skip)
 
 
@@ -19,7 +20,8 @@ async def all(
 async def create(
     item: ItemIn,
     items: ItemsRepository = Depends(get_item_repository),
-    current_user: User = Depends(get_currnet_user)):
+    current_user: User = Depends(get_currnet_user)
+):
     return await items.create(item, current_user.id)
 
 
@@ -28,20 +30,24 @@ async def update(
     id: int,
     item_data: ItemIn,
     items: ItemsRepository = Depends(get_item_repository),
-    current_user: User = Depends(get_currnet_user)):
+    current_user: User = Depends(get_currnet_user)
+):
     item = await items.get_by_id(id)
     if items and current_user.id == item.user:
         return await items.update(id, item_data, item.user)
     else:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="item not found")
 
+
 @router.delete("/")
 async def delete(
     id: int,
     items: ItemsRepository = Depends(get_item_repository),
-    current_user = Depends(get_currnet_user)):
+    current_user: User = Depends(get_currnet_user)
+):
 
     if current_user.id == id:
         return await items.delete(id)
     else:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="item not found")
+

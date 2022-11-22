@@ -29,20 +29,19 @@ def decode_access_token(token: str):
     try:
         decoded_jwt = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
     except JWTError:
-        raise None
-
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Wrong token")
     return decoded_jwt
 
 
 class JWTBearer(HTTPBearer):
+
     def __init__(self, *, auto_error: bool = True):
         super().__init__(auto_error=auto_error)
-    
-    async def __call__(self, request: Request) -> HTTPAuthorizationCredentials|None:
-        credentials: HTTPAuthorizationCredentials = await super().__call__(request)
+
+    async def __call__(self, request: Request) -> HTTPAuthorizationCredentials | None:
+        credentials = await super().__call__(request)
         if credentials:
             token = decode_access_token(credentials.credentials)
             if token:
-                return credentials.credentials
-        
+                return credentials
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Invalid auth token")
