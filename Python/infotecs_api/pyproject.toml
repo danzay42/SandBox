@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "geo"
+version = "0.2.0"
+description = ""
+authors = ["Daniil Zaytsev <zdanil34@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.88.0"
+uvicorn = "^0.20.0"
+pytz = "^2022.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

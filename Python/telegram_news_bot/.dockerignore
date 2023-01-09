@@ -1,0 +1,4 @@
+*
+!newsbot
+!*.py
+!requirements.txt
