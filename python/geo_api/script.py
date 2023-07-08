@@ -120,7 +120,7 @@ mem_db: MemDataBase
 @app.on_event("startup")
 def db_up():
     global mem_db
-    mem_db = MemDataBase("RU.txt")
+    # mem_db = MemDataBase("RU.txt")
 
 @app.get('/info', response_model=GeoInfo)
 async def info(id: int):
