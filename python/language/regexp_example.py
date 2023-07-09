@@ -6,9 +6,9 @@ def build_row(line: str) -> str:
     result = re.match(
         r"^\d*\.\s*" +
         r"(?P<title>[ёЁA-я\w\s\.:…&,-]*?)" +
-        r"(?P<edition>\s*(?P<edition_num>\d*)-?[ёЁA-я\a]*\s*((e|E)d|(И|и)зд)[\wёЁA-я\.,]*)?" +
-        r"(\s*::\s*(?P<author>[ёЁA-я\w\s\.,-]*?))?" +
-        r"(\((?P<note>[ёЁA-я\w\s,]*)\))?" +
+        r"(?P<edition>\s*(?P<edition_num>\d*)-?[ёЁA-я\a]*\s*(?:(?:e|E)d|(?:И|и)зд)[\wёЁA-я\.,]*)?" +
+        r"(?:\s*::\s*(?P<author>[ёЁA-я\w\s\.,-]*?))?" +
+        r"(?:\((?P<note>[ёЁA-я\w\s,]*)\))?" +
         r"\s*$",
         line).groupdict(default="")
     result["edition_num"] = result["edition_num"] or result["edition"]
