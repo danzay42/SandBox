@@ -26,5 +26,11 @@ print("www.example.com".strip('cmowz.'))
 
 print(','.join(str(val) for val in [1, 2, 3, 4, 5, 6]))
 
+print("vertical tabulation".center(width, "="))
+print(*["one", "two", "three", 1,2,3,4,5], sep="\v")
+print("escape_symbols".center(width, "="))
+print("v1\v", "v2\v", "r1\r", "v3\v", "f1\f", "b1\b", "end1", "\b"*100, "end2", sep="")
+
+
 fin = "fin"
 print(f"{fin:=^40}")
