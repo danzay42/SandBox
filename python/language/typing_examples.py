@@ -52,4 +52,3 @@ if __name__ == '__main__':
     main1(my_func)
     main2(my_func)
     main3(Args(a="Hello ", b="...", c="!", d="..."))
-
