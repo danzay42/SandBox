@@ -1,19 +1,31 @@
 .ONESHELL:
+.PHONY: install venv test clean
+.DEFAULT_GOAL:=install
 
-install venv:
+.make:
+	mkdir .make
+.make/venv:
+	make venv
+venv: .make
 	virtualenv venv
-	. venv/bin/activate
+	touch .make/venv
+
+.make/install:
+	make install
+install: .make/venv .make
 	pip install --upgrade pip poetry six
 	poetry config virtualenvs.create false --local
 	poetry install
+	touch .make/install
 
-requirements:
-	. venv/bin/activate
+.make/test:
+	make test
+test: .make/install
+	pytest -vvv tests
+	touch .make/test
+
+requirements.txt:
 	poetry export -f requirements.txt --output requirements.txt --without-hashes
 
-test: venv
-	. venv/bin/activate
-	pytest -vvv tests
-
 clean:
-	rm -rf venv poetry.toml requirements.txt .pytest_cache
+	rm -rf venv poetry.toml requirements.txt .pytest_cache .make __pycache__ .tox
