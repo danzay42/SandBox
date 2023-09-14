@@ -3,16 +3,19 @@ name = "py-cli"
 version = "0.1.0"
 description = ""
 authors = ["Daniil Zaytsev <zdanil34@gmail.com>"]
-readme = "README.md"
-packages = [{include = "py-cli"}]
+packages = [{include = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
 
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.2"
+tox = "^4.11.3"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-my_package_cli = 'src.cli:main'
+my_py_cli = 'src.cli:main'
