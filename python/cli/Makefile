@@ -7,7 +7,7 @@
 .make/venv:
 	make venv
 venv: .make
-	virtualenv venv
+	virtualenv .venv
 	touch .make/venv
 
 .make/install:
@@ -28,4 +28,4 @@ requirements.txt:
 	poetry export -f requirements.txt --output requirements.txt --without-hashes
 
 clean:
-	rm -rf venv poetry.toml requirements.txt .pytest_cache .make __pycache__ .tox
+	rm -rf venv requirements.txt .pytest_cache .make __pycache__ .tox
