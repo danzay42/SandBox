@@ -21,7 +21,9 @@ def main():
     args = Arguments.from_arguments()
 
     input_stream = args.file_in.open(encoding="utf-8") if args.file_in else sys.stdin
-    output_stream = args.file_out.open("w", encoding="utf-8") if args.file_out else sys.stdout
+    output_stream = (
+        args.file_out.open("w", encoding="utf-8") if args.file_out else sys.stdout
+    )
 
     for line in input_stream:
         print(f"processed: {line}", file=output_stream)
