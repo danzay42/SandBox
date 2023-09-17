@@ -1,0 +1,47 @@
+(Connect "N5242B", "TCPIP0::192.168.0.101::inst0::INSTR", "PNA Network Analyzers / A.14.80.xx")
+:SYSTem:FPReset
+*WAI
+:DISPlay:WINDow1:STATe 1
+*WAI
+:CALCulate:PARameter:DELete:ALL
+*WAI
+:CALCulate1:CUSTom:DEFine "CompIn21","Gain Compression","CompIn21"
+:CALCulate1:CUSTom:DEFine "CompOut21","Gain Compression","CompOut21"
+*WAI
+:DISPlay:WINDow1:TRACe1:FEED "CompIn21"
+:DISPlay:WINDow1:TRACe2:FEED "CompOut21"
+*WAI
+:SENSe1:FREQuency:STARt 8000000000
+:SENSe1:FREQuency:STOP 12000000000
+:SENSe:SWEep:TYPE LINear
+:SENSe:GCSetup:AMODe SMARtsweep
+:SENSe:SWEep:POINts 101
+:SENSe:BWIDth:RESolution 1000
+:SOURce:POWer1:COUPle 0
+:SOURce:POWer2:COUPle 0
+:SOURce:POWer1:ATTenuation:AUTO 0
+:SOURce:POWer2:ATTenuation:AUTO 0
+:SOURce:POWer1:ATTenuation 15
+:SOURce:POWer1:LEVel:IMMediate:AMPLitude -40
+:SENSe1:POWer:ATTenuator BRECeiver,20
+:SOURce:POWer2:LEVel:IMMediate:AMPLitude 0
+:SOURce1:POWer1:ALC:MODE:RECeiver:SAFE:MAX -20
+:SOURce1:POWer1:ALC:MODE:RECeiver:SAFE:MIN -40
+:SENSe1:GCSetup:COMPression:ALGorithm CFLGain
+:SENSe:CORRection:COLLect:GUIDed:CONNector:PORT1:SELect "APC 3.5 female"
+:SENSe:CORRection:COLLect:GUIDed:CONNector:PORT2:SELect "APC 3.5 female"
+:SENSe:CORRection:COLLect:GUIDed:CKIT:PORT1:SELect "N4691-60006 ECal 08195"
+:SENSe:CORRection:COLLect:GUIDed:CKIT:PORT2:SELect "N4691-60006 ECal 08195"
+:SENSe:CORRection:COLLect:GUIDed:INITiate:IMMediate
+:SENSe:CORRection:COLLect:GUIDed:STEPs?
+# Переключение шагов калибровки
+:SENSe:CORRection:COLLect:GUIDed:ACQuire STAN1,SYNC
+:SENSe:CORRection:COLLect:GUIDed:ACQuire STAN2,SYNC
+*OPC
+# Завершение калибровки
+:SENSe:CORRection:COLLect:GUIDed:SAVE:IMMediate 1
+:DISPlay:WINDow2:STATe 0
+# Измерение
+:CALCulate:MARKer1:STATe 1
+:CALCulate:MARKer1:FUNCtion:TRACking 1
+:CALCulate:MARKer1:FUNCtion:SELect MINimum

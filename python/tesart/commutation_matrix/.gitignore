@@ -1,0 +1,7 @@
+.idea
+__pycache__
+*.log
+*.ini
+*.iso
+test_client.py
+save_config_*.ini

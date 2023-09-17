@@ -1,0 +1,49 @@
+(Connect "N5242B", "TCPIP0::192.168.0.101::inst0::INSTR", "PNA Network Analyzers / A.14.80.xx")
+:SYSTem:FPReset
+:DISPlay:WINDow1:STATe 1
+*WAI
+*WAI
+:CALCulate:PARameter:DELete:ALL
+*WAI
+:CALCulate1:CUSTom:DEFine "S21","Standard","S21"
+*WAI
+:DISPlay:WINDow1:TRACe2:FEED "S21"
+*WAI
+:SOURce:POWer1:COUPle 0
+:SOURce:POWer2:COUPle 0
+:SOURce:POWer1:MODE ON
+:SOURce:POWer1:ATTenuation:AUTO 0
+:SOURce:POWer2:ATTenuation:AUTO 0
+:SOURce:POWer1:ATTenuation 15
+:SENSe1:POWer:ATTenuator BRECeiver,30
+:SOURce:POWer1:LEVel:IMMediate:AMPLitude -24.65
+:SOURce:POWer2:LEVel:IMMediate:AMPLitude 0
+:SOURce:POWer1:ALC:MODE:RECeiver:STATe 1,"Port 1"
+:SOURce:POWer1:ALC:MODE:RECeiver:OFFSet 0.1
+:SENSe:SWEep:TYPE LINear
+:SENSe:SWEep:POINts 750
+:SENSe:FREQuency:STARt 8000000000
+:SENSe:FREQuency:STOP 12000000000
+:SENSe:BWIDth:RESolution 1000
+# Порт 1
+:SYSTem:COMMunicate:PSENsor USB,"Keysight Technologies,U2002H,MY51500003"
+:SYSTem:COMMunicate:PSENsor?
+:SOURce:POWer:CORRection:COLLect:ITERation:NTOLerance 0.1
+:SOURce:POWer:CORRection:OFFSet:MAGNitude 0
+:SOURce:POWer:CORRection:COLLect:DISPlay:STATe 1
+:SOURce:POWer:CORRection:COLLect:ACQuire PMETer,"ASENSOR","Port 1"
+# Измерение
+:CALCulate1:MEASure1:MARKer1:STATe 1
+:CALCulate1:MEASure1:MARKer2:STATe 1
+:CALCulate1:MEASure1:MARKer2:REFerence:STATe 1
+:CALCulate1:MEASure1:MARKer1:X 10000000000
+:CALCulate1:MEASure1:MARKer2:X 10250000000
+:CALCulate1:MEASure1:MARKer2:REFerence:X 9750000000
+:CALCulate1:MEASure1:MARKer2:DELTa 1
+:CALCulate1:MEASure1:MARKer2:STATe 0
+:CALCulate1:MEASure1:MARKer2:REFerence:STATe 0
+:CALCulate1:MEASure1:MATH:MEMorize
+:CALCulate1:MEASure1:MATH:FUNCtion DIVide
+:MMEMory:STORe:FILE "file"
+:CALCulate1:MEASure1:FORMat PHASe
+:MMEMory:STORe:FILE "file"

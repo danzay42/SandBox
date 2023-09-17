@@ -1,0 +1,351 @@
+{
+  "description1":                   "Методики измерения",
+  "description2":                   "!!!Нумерация строк начинается с 1!!!",
+
+  "Config": {
+    "default_vna_address":            "TCPIP0::192.168.1.101::hislip0::INSTR",
+    "default_sa_address":             "TCPIP0::192.168.1.104::hislip0::INSTR",
+    "default_ps_address":             "ASRL4::INSTR",
+    "default_smu_1_address":          "USB0::0x0957::0x4118::MY60320001::0::INSTR",
+    "default_smu_2_address":          "USB0::0x0957::0x4118::MY61160003::0::INSTR",
+    "default_fg_address":             "USB0::0x0957::0x3C18::MY60260003::0::INSTR"
+  },
+  "Measure_technics": [
+    {
+      "num": 0,
+      "title": "TEST",
+      "description": "Description for test technique.",
+      "pic": null,
+      "file": null,
+      "action": null,
+      "action_args": null,
+      "acquire_timeout": null,
+      "steps": [
+        {
+          "label": "Step 1",
+          "description": "Step 1 description.",
+          "pic": null,
+          "file": null,
+          "action": "action_test",
+          "action_args": 1,
+          "cmd_range": null,
+          "acquire_timeout": null
+        },
+        {
+          "label": "Step 2",
+          "description": "Step 2 description.",
+          "pic": "m3.jpeg",
+          "action": "action_test",
+          "action_args": 2
+        },
+        {
+          "label": "Step 3",
+          "description": "Step 3 description.",
+          "pic": "m3.jpeg",
+          "action": "action_test",
+          "action_args": 3
+        }
+      ]
+    },
+    {
+      "num": 1,
+      "title": "Ток потребления",
+      "description": "Методика измерений тока потребления исследуемого устройства",
+      "steps": [
+        {
+          "label": "Измерение потребляемого тока",
+          "action": "action_get_current"
+        }
+      ]
+    },
+    {
+      "num": 2,
+      "title": "Мощность передающего тракта",
+      "description": "Методика измерений выходной непрерывной мощности передающего тракта",
+      "scpi_cmds_path": "scpi_m2.txt",
+      "steps": [
+        {
+          "label": "Настройка векторного анализатора цепей.",
+          "scpi_cmd_from": 2,
+          "scpi_cmd_to": 23
+        },
+        {
+          "label": "Калибровка векторного анализатора цепей.",
+          "description": "Подключите порт 1 ВАЦ к измерителю мощности согласно схеме",
+          "scpi_cmd_from": 25,
+          "scpi_cmd_to": 35,
+          "acquire_timeout": 30
+        },
+        {
+          "label": "Подключение ППМ",
+          "description": "Подключите порты ВАЦ к ППМ согласно схеме.",
+          "pic": null
+        },
+        {
+          "label": "Измерение...",
+          "description": "Настройка отображения результатов измерений на ВАЦ.",
+          "scpi_cmd_from": 37,
+          "scpi_cmd_to": 46
+        }
+      ]
+    },
+    {
+      "num": 3,
+      "title": "Сдвиг фазы сигнала",
+      "description": "Методика измерений сдвига фазы сигнала на выходе передающего тракта при изменении сигнала управления «ФАЗ_1» и «ФАЗ_2»",
+      "scpi_cmds_path": "scpi_m3.txt",
+      "steps": [
+        {
+          "label": "Настройка векторного анализатора цепей.",
+          "scpi_cmd_from": 2,
+          "scpi_cmd_to": 23
+        },
+        {
+          "label": "Калибровка мощности сигнала с первого порта ВАЦ.",
+          "description": "Подключите порт 1 ВАЦ к измерителю мощности согласно схеме.",
+          "scpi_cmd_from": 25,
+          "scpi_cmd_to": 34,
+          "acquire_timeout": 30
+        },
+        {
+          "label": "Калибровка портов ВАЦ с помощью ECal",
+          "description": "Подключите порты ВАЦ к электронному калибратору согласно схеме.",
+          "pic": "m3.jpeg",
+          "scpi_cmd_from": 36,
+          "scpi_cmd_to": 37,
+          "acquire_timeout": 20
+        },
+        {
+          "label": "Сохранение опорного значения и настройка маркера.",
+          "scpi_cmd_from": 39,
+          "scpi_cmd_to": 50,
+          "action": "action_waiter",
+          "action_args": [":STAT:OPER:AVER1:COND?", "+2"],
+          "acquire_timeout": 20
+        },
+        {
+          "label": "Измерение «ФАЗ_1»",
+          "action": "action_phase",
+          "action_args": [1]
+        },
+        {
+          "label": "Измерение «ФАЗ_2»",
+          "action": "action_phase",
+          "action_args": [2]
+        },
+        {
+          "label": "Измерение «ФАЗ_1» и «ФАЗ_2»",
+          "action": "action_phase",
+          "action_args": [1, 2]
+        }
+      ]
+    },
+    {
+      "num": 4,
+      "title": "Относительный уровнь побочных и внеполосных излучений передающего тракта",
+      "description": "Методика измерений относительного уровня побочных и внеполосных излучений на выходе передающего тракта исследуемого устройства",
+      "scpi_cmds_path": "scpi_m5.txt",
+      "steps": [
+        {
+          "label": "Настройка векторного анализатора цепей.",
+          "scpi_cmd_from": 2,
+          "scpi_cmd_to": 21
+        },
+        {
+          "label": "Калибровка векторного анализатора цепей",
+          "scpi_cmd_from": 23,
+          "scpi_cmd_to": 32,
+          "acquire_timeout": 30
+        },
+        {
+          "label": "Установка ВАЦ в режим излучения гармонического сигнала.",
+          "scpi_cmd_from": 34,
+          "scpi_cmd_to": 41
+        },
+        {
+          "label": "Настройка анализатора спектра.",
+          "scpi_cmd_from": 43,
+          "scpi_cmd_to": 65,
+          "action": "action_sa"
+        }
+      ]
+    },
+    {
+      "num": 5,
+      "title": "Амплитуда на выходах ПЧ1 ПЧ2",
+      "description": "Методика измерений амплитуды напряжения на выходах ПЧ1 и ПЧ2 при максимальной входной мощности приемного тракта исследуемого устройства",
+      "scpi_cmds_path": "scpi_m6.txt",
+      "steps": [
+        {
+          "label": "Настройка векторного анализатора цепей",
+          "scpi_cmd_from": 2,
+          "scpi_cmd_to": 34
+        },
+        {
+          "label": "Калибровка источника мощности",
+          "description": "Подключите измеритель мощности к порту №3",
+          "scpi_cmd_from": 36,
+          "scpi_cmd_to": 46,
+          "acquire_timeout": 30
+        },
+        {
+          "label": "Калибровка первого порта измерителем мощности",
+          "description": "Подключите измеритель мощности к порту №1",
+          "scpi_cmd_from": 48,
+          "scpi_cmd_to": 53,
+          "acquire_timeout": 100
+        },
+        {
+          "label": "Калибровка портов ВАЦ с помощью ECal",
+          "description": "Подключите порты ВАЦ к электронному калибратору согласно схеме.",
+          "scpi_cmd_from": 55,
+          "scpi_cmd_to": 57,
+          "acquire_timeout": 100
+        },
+        {
+          "label": "Измерение амплитуды напряжения на выходе ПЧ1",
+          "description": "Подключите выход исследуемого устройства (ПЧ1).\nАмплитуда напряжения на выходе ПЧ1[В]: ",
+          "scpi_cmd_from": 59,
+          "scpi_cmd_to": 65
+        },
+        {
+          "label": "Измерение амплитуды напряжения на выходе ПЧ2",
+          "description": "Подключите выход исследуемого устройства (ПЧ2).\nАмплитуда напряжения на выходе ПЧ2[В]: ",
+          "scpi_cmd_from": 59,
+          "scpi_cmd_to": 65
+        }
+      ]
+    },
+    {
+      "num": 6,
+      "title": "Коэффициента шума",
+      "description": "Методика измерений коэффициента шума приемного тракта исследуемого устройства",
+      "scpi_cmds_path": "scpi_m7.txt",
+      "steps": [
+        {
+          "label": "Настройка векторного анализатора цепей",
+          "scpi_cmd_from": 2,
+          "scpi_cmd_to": 45
+        },
+        {
+          "label": "Калибровка источника мощности",
+          "description": "Подключите измеритель мощности к порту №3.",
+          "scpi_cmd_from": 47,
+          "scpi_cmd_to": 57,
+          "acquire_timeout": 100
+        },
+        {
+          "label": "Калибровка источника мощности",
+          "description": "Подключите первый порт ВАЦ к измерителю мощности",
+          "scpi_cmd_from": 59,
+          "scpi_cmd_to": 66,
+          "acquire_timeout": 1000
+        },
+        {
+          "label": "Калиибровка портов ВАЦ. Шаг 1",
+          "description": "Подключите первый и второй порты ВАЦ между собой через переход",
+          "scpi_cmd_from": 68,
+          "scpi_cmd_to": 68,
+          "acquire_timeout": 1000
+        },
+        {
+          "label": "Калиибровка портов ВАЦ. Шаг 2",
+          "description": "Подключите первый и второй порты ВАЦ к электронному калибратору",
+          "scpi_cmd_from": 70,
+          "scpi_cmd_to": 72,
+          "acquire_timeout": 1000
+        },
+        {
+          "label": "Калиибровка портов ВАЦ. Шаг 3",
+          "description": "Коэффициент шума: ",
+          "scpi_cmd_from": 74,
+          "scpi_cmd_to": 80
+        }
+      ]
+    },
+    {
+      "num": 7,
+      "title": "Верхняя граница линейности амплитудной характеристики",
+      "description": "Методика измерений верхней границы линейности амплитудной характеристики приемного тракта по входу",
+      "scpi_cmds_path": "scpi_m8.txt",
+      "steps": [
+        {
+          "label": "Настройка векторного анализатора цепей.",
+          "scpi_cmd_from": 2,
+          "scpi_cmd_to": 36
+        },
+        {
+          "label": "Калибровка третьего порта ВАЦ",
+          "description": "Подключите измеритель мощности к порту №3",
+          "scpi_cmd_from": 38,
+          "scpi_cmd_to": 48,
+          "acquire_timeout": 100
+        },
+        {
+          "label": "Подключите измеритель мощности к порту №1",
+          "description": "Подключите измеритель мощности к порту №1",
+          "scpi_cmd_from": 50,
+          "scpi_cmd_to": 55,
+          "acquire_timeout": 100
+        },
+        {
+          "label": "Калибровка. ШАГ 2",
+          "description": "Подключите первый и второй порты ВАЦ к электронному калибратору",
+          "scpi_cmd_from": 57,
+          "scpi_cmd_to": 59,
+          "acquire_timeout": 100
+        },
+        {
+          "label": "Измерение значения точки компрессии.",
+          "description": "Минимальное значение точки компрессии[дБ]: ",
+          "scpi_cmd_from": 61,
+          "scpi_cmd_to": 67
+        }
+      ]
+    },
+    {
+      "num": 8,
+      "title": "Динамический диапазон",
+      "description": "Методика измерений динамического диапазона приемного тракта"
+    },
+    {
+      "num": 9,
+      "title": "Амплитуда на выходах ПЧ1 ПЧ2 (контроль)",
+      "description": "Методика измерений амплитуды напряжения на выходах ПЧ1 и ПЧ2 в режиме контроля исследуемого устройства",
+      "scpi_cmds_path": "scpi_m10.txt",
+      "steps": [
+        {
+          "label": "Настройка векторного анализатора цепей",
+          "scpi_cmd_from": 2,
+          "scpi_cmd_to": 28
+        },
+        {
+          "label": "Калибровка источником мощности (порт №3)",
+          "description": "Подключите измеритель мощности к порту №3.",
+          "scpi_cmd_from": 30,
+          "scpi_cmd_to": 39,
+          "acquire_timeout": 100
+        },
+        {
+          "label": "Калибровка источником мощности (порт №1)",
+          "description": "Подключите измеритель мощности к порту №1.",
+          "scpi_cmd_from": 41,
+          "scpi_cmd_to": 44,
+          "acquire_timeout": 100
+        },
+        {
+          "label": "Амплитуда напряжения на выходе ПЧ1",
+          "description": "Подключите выход исследуемого устройства (ПЧ1).\nАмплитуда напряжения на выходе ПЧ1[В]: ",
+          "scpi_cmd_from": 46,
+          "scpi_cmd_to": 51
+        },
+        {
+          "label": "Амплитуда напряжения на выходе ПЧ2",
+          "description": "Подключите выход исследуемого устройства (ПЧ2).\nАмплитуда напряжения на выходе ПЧ2[В]: ",
+          "scpi_cmd_from": 46,
+          "scpi_cmd_to": 51
+        }
+      ]
+    }
+  ]
+}

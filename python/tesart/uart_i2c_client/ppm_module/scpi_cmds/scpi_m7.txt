@@ -1,0 +1,80 @@
+
+:SYSTem:FPReset
+:DISPlay:WINDow1:STATe 1
+:CALCulate:PARameter:DELete:ALL
+:CALCulate1:CUSTom:DEFine "Noise figure","Noise Figure Converters","NF"
+:CALCulate1:CUSTom:DEFine "DUTNPD","Noise Figure Converters","DUTNPD"
+:DISPlay:WINDow1:TRACe1:FEED "Noise figure"
+:DISPlay:WINDow1:TRACe2:FEED "DUTNPD"
+:SENSe1:SWEep:MODE HOLD
+:SOURce:POWer1:COUPle 0
+:SOURce:POWer2:COUPle 0
+:SOURce:POWer3:COUPle 0
+:SOURce:POWer1:ATTenuation:AUTO 0
+:SOURce:POWer2:ATTenuation:AUTO 0
+:SOURce:POWer3:ATTenuation:AUTO 0
+:SOURce:POWer1:ATTenuation 15
+:SOURce:POWer2:ATTenuation 15
+:SOURce:POWer3:ATTenuation 0
+:SOURce:POWer1:LEVel:IMMediate:AMPLitude -24.65,"Port 1"
+:SOURce:POWer2:LEVel:IMMediate:AMPLitude -25,"Port 2"
+:SENSe:POWer:ATTenuator ARECeiver,10
+:SENSe:POWer:ATTenuator BRECeiver,20
+:SENSe:MIXer:LO1:NAME "Port 3"
+:SENSe:MIXer:INPut:FREQuency:STARt 14950000000
+:SENSe:MIXer:INPut:FREQuency:STOP 15050000000
+:SENSe:MIXer:LO1:FREQuency:MODE FIXED
+:SENSe:MIXer:LO1:FREQuency:FIXed 10000000000
+:SENSe:MIXer:OUTPut:FREQuency:SIDeband LOW
+:SENSe:MIXer:CALCulate OUTPut
+:SENSe:MIXer:APPLy
+:SOURce1:POWer3:ALC:MODE:RECeiver:OFFSet 14,"Port 3"
+:SOURce:POWer3:LEVel:IMMediate:AMPLitude 14.3,"Port 3"
+:SENSe:SWEep:TYPE LINear
+:SENSe:SWEep:POINts 201
+:SENSe:BWIDth:RESolution 1000
+:SENSe:NOISe:BWIDth:RESolution 4000000
+:SENSe:NOISe:AVERage:COUNt 100
+:SENSe:NOISe:AVERage:STATe 1
+:SENSe:NOISe:RECeiver NOISe
+:SENSe:NOISe:GAIN 0
+:SENSe:NOISe:TEMPerature:AMBient 295
+:CALCulate:MEASure1:FORMat MLOG
+:CALCulate:MEASure2:FORMat MLOG
+:CALCulate:MEASure2:SMOothing:STATe 1
+:CALCulate:MEASure2:SMOothing:APERture 2
+
+:SYSTem:CONFigure:EDEVice:ADD "power_receiver"
+:SYSTem:CONFigure:EDEVice:DTYPe "power_receiver","Power Meter"
+:SYSTem:CONFigure:EDEVice:DRIV "power_receiver","AGPM"
+:SYSTem:COMMunicate:PSENsor USB,"Keysight Technologies,U2021XA,MY60300004"
+:SYSTem:CONFigure:EDEVice:IOConfig "power_receiver","USB0::0x2A8D::0x7F18::MY60300004::0::INSTR"
+:SOURce:POWer3:CORRection:COLLect:ITERation:NTOLerance 0.1
+:SOURce:POWer3:CORRection:OFFSet:MAGNitude 14
+:SOURce:POWer3:CORRection:COLLect:DISPlay:STATe 1
+:SOURce:POWer3:CORRection:COLLect:ACQuire PMETer,"ASENSOR","Port 3"
+:SENSe1:CORRection:PREFerence:CSET:SAVE CALRegister
+:SOURce:POWer:CORRection:COLLect:SAVE RRECeiver
+
+:SENSe:NOISe:CALibration:METHod "Scalar"
+:SENSe:NOISe:CALibration:RMEThod "PowerMeter"
+:SENSe:CORRection:COLLect:GUIDed:CONNector:PORT1:SELect "APC 3.5 female"
+:SENSe:CORRection:COLLect:GUIDed:CONNector:PORT2:SELect "APC 3.5 female"
+:SENSe:CORRection:COLLect:GUIDed:CKIT:PORT1:SELect "N4691D ECal MY59410322"
+:SENSe:CORRection:COLLect:GUIDed:CKIT:PORT2:SELect "N4691D ECal MY59410322"
+:SENSe:CORRection:COLLect:GUIDed:INITiate:IMMediate
+:SENSe:CORRection:COLLect:GUIDed:ACQuire STAN1,SYNC
+
+:SENSe:CORRection:COLLect:GUIDed:ACQuire STAN2,SYNC
+
+:SENSe:CORRection:COLLect:GUIDed:ACQuire STAN3,SYNC
+SENSe:CORRection:COLLect:GUIDed:SAVE:IMMediate 1
+:DISPlay:WINDow2:STATe 0
+
+:SENSe1:SWEep:MODE CONTinuous
+:CALCulate:MARKer1:STATe 1
+:CALCulate:MARKer1:FUNCtion:TRACking 1
+:CALCulate:MARKer1:FUNCtion:SELect MAXimum
+:CALCulate:MARKer1:FUNCtion:DOMain:USER:STARt 4960000000
+:CALCulate:MARKer1:FUNCtion:DOMain:USER:STOP 5040000000
+:CALCulate:MARKer1:Y?

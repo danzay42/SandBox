@@ -1,0 +1,73 @@
+(Connect "N5242B", "TCPIP0::169.254.50.37::hislip0::INSTR", "PNA Network Analyzers / A.14.80.xx")
+:SYSTem:FPReset
+*WAI
+:DISPlay:WINDow1:STATe 1
+*WAI
+:CALCulate:PARameter:DELete:ALL
+*WAI
+:CALCulate1:CUSTom:DEFine "CompIn21","Gain Compression Converters","CompIn21"
+*WAI
+:CALCulate1:CUSTom:DEFine "CompOut21","Gain Compression Converters","CompOut21"
+*WAI
+:DISPlay:WINDow1:TRACe1:FEED "CompIn21"
+*WAI
+:DISPlay:WINDow1:TRACe2:FEED "CompOut21"
+*WAI
+:SENSe1:SWEep:MODE HOLD
+:SOURce:POWer1:COUPle 0
+:SOURce:POWer2:COUPle 0
+:SOURce:POWer3:COUPle 0
+:SOURce:POWer1:ATTenuation:AUTO 0
+:SOURce:POWer2:ATTenuation:AUTO 0
+:SOURce:POWer3:ATTenuation:AUTO 0
+:SOURce:POWer1:ATTenuation 5
+:SOURce:POWer2:ATTenuation 20
+:SOURce:POWer3:ATTenuation 0
+:SOURce:POWer1:LEVel:IMMediate:AMPLitude -24.65,"Port 1"
+:SOURce:POWer2:LEVel:IMMediate:AMPLitude -30,"Port 2"
+:SENSe:POWer:ATTenuator ARECeiver,10
+:SENSe:POWer:ATTenuator BRECeiver,20
+:SENSe:MIXer:LO1:NAME "Port 3"
+:SENSe:MIXer:INPut:FREQuency:STARt 14950000000
+:SENSe:MIXer:INPut:FREQuency:STOP 15050000000
+:SENSe:MIXer:LO1:FREQuency:MODE FIXED
+:SENSe:MIXer:LO1:FREQuency:FIXed 10000000000
+:SENSe:MIXer:OUTPut:FREQuency:SIDeband LOW
+:SENSe:MIXer:CALCulate OUTPut
+:SENSe:MIXer:APPLy
+:SOURce:POWer3:ALC:MODE:RECeiver:OFFSet 14,"Port 3"
+:SOURce:POWer3:LEVel:IMMediate:AMPLitude 14.3,"Port 3"
+*WAI
+:SENSe:SWEep:TYPE LINear
+:SENSe:GCSetup:AMODe SMARtsweep
+:SENSe:SWEep:POINts 201
+:SENSe:BWIDth:RESolution 1000
+:SYSTem:COMMunicate:PSENsor USB,"Keysight Technologies,U2002H,MY51500003"
+:SYSTem:COMMunicate:PSENsor?
+:SOURce:POWer:CORRection:COLLect:ITERation:NTOLerance 0.1
+:SOURce:POWer:CORRection:OFFSet:MAGNitude 0
+:SOURce:POWer:CORRection:COLLect:DISPlay:STATe 1
+:SOURce:POWer:CORRection:COLLect:ACQuire PMETer,"ASENSOR","Port 3",ASYNchronous
+:SENSe1:CORRection:PREFerence:CSET:SAVE CALRegister
+:SOURce:POWer:CORRection:COLLect:SAVE RRECeiver
+:SENSe:CORRection:COLLect:GUIDed:CONNector:PORT1:SELect "APC 3.5 female"
+:SENSe:CORRection:COLLect:GUIDed:CONNector:PORT2:SELect "APC 3.5 female"
+:SENSe:CORRection:COLLect:GUIDed:CKIT:PORT1:SELect "N4691-60006 ECal 08195"
+:SENSe:CORRection:COLLect:GUIDed:CKIT:PORT2:SELect "N4691-60006 ECal 08195"
+:SENSe:CORRection:COLLect:GUIDed:INITiate:IMMediate
+:SENSe:CORRection:COLLect:GUIDed:STEPs?
+# Переключение шагов калибровки
+:SENSe:CORRection:COLLect:GUIDed:ACQuire STAN1,ASYNchronous
+:SENSe:CORRection:COLLect:GUIDed:ACQuire STAN2,ASYNchronous
+*OPC
+# Завершение калибровки
+:SENSe:CORRection:COLLect:GUIDed:SAVE:IMMediate 1
+:DISPlay:WINDow2:STATe 0
+# Измерение
+:SENSe1:SWEep:MODE CONTinuous
+:CALCulate:MARKer1:STATe 1
+:CALCulate:MARKer1:FUNCtion:TRACking 1
+:CALCulate:MARKer1:FUNCtion:SELect MINimum
+:CALCulate:MARKer1:FUNCtion:DOMain:USER:STARt 4960000000
+:CALCulate:MARKer1:FUNCtion:DOMain:USER:STOP 5040000000
+:CALCulate:MARKer1:Y?

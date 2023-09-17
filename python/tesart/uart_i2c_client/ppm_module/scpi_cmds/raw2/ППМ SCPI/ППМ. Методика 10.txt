@@ -1,0 +1,61 @@
+:SYSTem:FPReset
+:DISPlay:WINDow:STATe 1
+:CALCulate:PARameter:DELete:ALL
+:CALCulate:CUSTom:DEFine "Standard meas","Standard","B_1"
+:DISPlay:WINDow:TRACe:FEED "Standard meas"
+:SENSe:SWEep:TYPE LINear
+:SENSe:SWEep:POINts 201
+:SENSe:FREQuency:STARt 8E+09
+:SENSe:FREQuency:STOP 1.2E+10
+:SENSe:BWIDth:RESolution 1000
+:SENSe1:SWEep:MODE HOLD
+:SOURce:POWer1:COUPle 0
+:SOURce:POWer2:COUPle 0
+:SOURce:POWer3:COUPle 0
+:SOURce:POWer1:MODE ON
+:SOURce:POWer1:ATTenuation:AUTO 0
+:SOURce:POWer1:ATTenuation 0
+:SOURce:POWer1:ALC:MODE:RECeiver:STATe 1,"Port 1"
+:SENSe1:PATH:CONFig:ELEMent:STATe "Port1RefMxr","External"
+:SOURce:POWe1:ALC:MODE:RECeiver:OFFSet 14
+:SOURce:POWer1:LEVel:IMMediate:AMPLitude 14.3
+:SOURce:POWe3:ALC:MODE:RECeiver:OFFSet 14
+:SOURce:POWer3:LEVel:IMMediate:AMPLitude 14.3
+:SENSe:FOM:RANGe3:FREQuency:OFFSet -1E+09
+:SENSe:FOM:RANGe4:FREQuency:MULTiplier 0
+:SENSe:FOM:RANGe4:FREQuency:OFFSet 1E+09
+:SENSe:FOM:DISPlay:SELect "Receivers"
+:SENSe:FOM:STATe 1
+:SENSe:FOM:RANGe3:FREQuency:OFFSet -10000000
+:SENSe:FOM:RANGe4:COUPled 0
+:SENSe:FOM:RANGe4:SWEep:TYPE CW
+:SENSe:FOM:RANGe4:FREQuency:CW 10000000
+:SENSe:FOM:DISPlay:SELect "Receivers"
+
+:SYSTem:CONFigure:EDEVice:ADD "power_receiver"
+:SYSTem:CONFigure:EDEVice:DTYPe "power_receiver","Power Meter"
+:SYSTem:CONFigure:EDEVice:DRIV "power_receiver","AGPM"
+:SYSTem:COMMunicate:PSENsor USB,"Keysight Technologies,U2021XA,MY60300004"
+:SYSTem:CONFigure:EDEVice:IOConfig "power_receiver","USB0::0x2A8D::0x7F18::MY60300004::0::INSTR"
+:SOURce:POWer3:CORRection:COLLect:ITERation:NTOLerance 0.1
+:SOURce:POWer3:CORRection:COLLect:ITERation:COUNt 55
+:SOURce:POWer3:CORRection:OFFSet:MAGNitude 14
+:SOURce:POWer3:CORRection:COLLect:DISPlay:STATe 1
+:SOURce:POWer3:CORRection:COLLect:ACQuire PMETer,"ASENSOR","Port 3"
+:SOURce:POWer3:CORRection:COLLect:SAVE
+
+:SOURce:POWer:CORRection:COLLect:ITERation:NTOLerance 0.1
+:SOURce:POWer:CORRection:COLLect:ITERation:COUNt 55
+:SOURce:POWer:CORRection:OFFSet:MAGNitude 14
+:SOURce:POWer:CORRection:COLLect:DISPlay:STATe 1
+:SOURce:POWer:CORRection:COLLect:ACQuire PMETer,"ASENSOR","Port 1"
+:SENSe1:CORRection:PREFerence:CSET:SAVE CALRegister
+:SOURce:POWer:CORRection:COLLect:SAVE RRECeiver
+
+:SENSe1:SWEep:MODE CONTinuous
+:CALCulate:MARKer1:STATe 1
+:CALCulate:MARKer1:FUNCtion:TRACking 1
+:CALCulate:MARKer1:FUNCtion:SELect MINimum
+:CALCulate:MARKer1:FUNCtion:DOMain:USER:STARt 8010000000
+:CALCulate:MARKer1:FUNCtion:DOMain:USER:STOP 12010000000
+:CALCulate:MARKer1:Y?

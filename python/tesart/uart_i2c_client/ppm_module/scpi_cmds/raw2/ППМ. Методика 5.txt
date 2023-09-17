@@ -1,0 +1,40 @@
+(Connect "N5242B", "TCPIP0::192.168.0.101::hislip0::INSTR", "Vector Network Analyzer / PNA FW A.13.30.07, PXI FW A.12.60.04")
+:SYSTem:FPReset
+:DISPlay:WINDow1:STATe 1
+:CALCulate1:PARameter:DELete:ALL
+:CALCulate1:CUSTom:DEFine "CH1_S11","Standard","S11"
+:CALCulate1:PARameter:SELect "CH1_S11"
+:DISPlay:WINDow1:TRACe1:FEED "CH1_S11"
+:SENSe1:SWEep:MODE HOLD
+:SENSe1:SWEep:POINts 201
+:SENSe1:FREQuency:STARt 8000000000
+:SENSe1:FREQuency:STOP 12000000000
+:SENSe1:BWIDth:RESolution 1000
+:SOURce1:POWer1:COUPle 0
+:SOURce1:POWer1:MODE ON
+:SOURce1:POWer1:ATTenuation:AUTO 0
+:SOURce1:POWer1:ATTenuation 0
+:SOURce1:POWer1:LEVel:IMMediate:AMPLitude 0,"Port 1"//амплитуда 14.3 дБм
+:SOURce1:POWer1:ALC:MODE:RECeiver:STATe 1
+:SENSe1:PATH:CONFig:ELEMent:STATe "Port1RefMxr","External"
+:SOURce1:POWer1:ALC:MODE:RECeiver:OFFSet 0//(поставить перед командй установки амплитуды)
+:OUTPut:STATe 1
+:SOURce:POWer:CORRection:COLLect:ITERation:NTOLerance 0.05
+:SYSTem:CONFigure:EDEVice:ADD "power_receiver"
+:SYSTem:CONFigure:EDEVice:DTYPe "power_receiver","Power Meter"//добавить команду усатнвки драйвера AGPM
+:SYSTem:COMMunicate:PSENsor USB,"Keysight Technologies,U2002H,MY51500003"//поменять visa-адрес и название
+:SYSTem:CONFigure:EDEVice:IOConfig "power_receiver","USB0::0x2A8D::0x3218::MY51500003::0::INSTR"
+:SYSTem:CONFigure:EDEVice:IOENable "power_receiver",1
+:SOURce1:POWer1:CORRection:COLLect:ACQuire PMETer,"ASENSOR"
+:SENSe1:CORRection:PREFerence:CSET:SAVE CALRegister
+:SOURce1:POWer1:CORRection:COLLect:SAVE RRECeiver
+:SENSe1:SWEep:MODE CONTinuous
+:CALCulate1:FSIMulator:SENDed:PMCircuit:STATe 1//Это пока убрать
+:CALCulate1:FSIMulator:SENDed:PMCircuit:PORT1:USER:FILename "path/file"//Это пока убрать
+:DISPlay:ANNotation:MESSage:STATe 0
+:SENSe1:FREQuency:CW 10000000000
+*CLS
+:DISPlay:ANNotation:MESSage:STATe 1
+:SENSe1:SWEep:TYPE CW
+:SENSe1:SWEep:POINts 1
+:SOURce1:POWer1:LEVel:IMMediate:AMPLitude 0//амплитуда 14.3 дБм

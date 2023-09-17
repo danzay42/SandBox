@@ -1,0 +1,58 @@
+(Connect "N5242B", "TCPIP0::192.168.0.101::inst0::INSTR", "PNA Network Analyzers / A.14.80.xx")
+:SYSTem:FPReset
+*WAI
+:DISPlay:WINDow1:STATe 1
+*WAI
+:CALCulate:PARameter:DELete:ALL
+*WAI
+:CALCulate1:CUSTom:DEFine "Noise figure","Noise Figure Cold Source","NF"
+*WAI
+:CALCulate1:CUSTom:DEFine "DUTNPD","Noise Figure Cold Source","DUTNPD"
+*WAI
+:DISPlay:WINDow1:TRACe1:FEED "Noise figure"
+*WAI
+:DISPlay:WINDow1:TRACe2:FEED "DUTNPD"
+*WAI
+:SENSe:SWEep:TYPE LINear
+:SENSe:SWEep:POINts 150
+:SENSe:BWIDth:RESolution 1000
+:SENSe1:FREQuency:CENTer 10000000000
+:SENSe1:FREQuency:SPAN 1500000
+:SOURce:POWer1:COUPle 0
+:SOURce:POWer2:COUPle 0
+:SOURce:POWer1:ATTenuation:AUTO 0
+:SOURce:POWer2:ATTenuation:AUTO 0
+:SOURce:POWer1:ATTenuation 15
+:SENSe1:POWer:ATTenuator BRECeiver,20
+:SOURce:POWer1:LEVel:IMMediate:AMPLitude -40
+:SOURce:POWer2:LEVel:IMMediate:AMPLitude 0
+:SENSe:NOISe:BWIDth:RESolution 4000000
+:SENSe:NOISe:AVERage:COUNt 100
+:SENSe:NOISe:AVERage:STATe 1
+:SENSe:NOISe:RECeiver NOISe
+:SENSe:NOISe:GAIN 0
+:SENSe:NOISe:TEMPerature:AMBient 295
+:CALCulate:MEASure1:FORMat MLOG
+:CALCulate:MEASure2:FORMat MLOG
+:CALCulate:MEASure2:SMOothing:STATe 1
+:CALCulate:MEASure2:SMOothing:APERture 2
+:SENSe:NOISe:CALibration:METHod "Scalar"
+:SENSe:NOISe:CALibration:RMEThod "PowerMeter"
+:SENSe:CORRection:COLLect:GUIDed:CONNector:PORT1:SELect "APC 3.5 female"
+:SENSe:CORRection:COLLect:GUIDed:CONNector:PORT2:SELect "APC 3.5 female"
+:SENSe:CORRection:COLLect:GUIDed:CKIT:PORT1:SELect "N4691-60006 ECal 08195"
+:SENSe:CORRection:COLLect:GUIDed:CKIT:PORT2:SELect "N4691-60006 ECal 08195"
+:SENSe:CORRection:COLLect:GUIDed:INITiate:IMMediate
+:SENSe:CORRection:COLLect:GUIDed:STEPs?
+# Переключение шагов калибровки
+:SENSe:CORRection:COLLect:GUIDed:ACQuire STAN1,SYNC
+:SENSe:CORRection:COLLect:GUIDed:ACQuire STAN3,SYNC
+:SENSe:CORRection:COLLect:GUIDed:ACQuire STAN2,SYNC
+*OPC
+# Завершение калибровки
+:SENSe:CORRection:COLLect:GUIDed:SAVE:IMMediate 1
+:DISPlay:WINDow2:STATe 0
+# Измерение
+:CALCulate:MARKer1:STATe 1
+:CALCulate:MARKer1:FUNCtion:TRACking 1
+:CALCulate:MARKer1:FUNCtion:SELect MAXimum

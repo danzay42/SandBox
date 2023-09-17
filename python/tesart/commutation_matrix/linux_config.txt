@@ -1,0 +1,57 @@
+### -------------------------------------
+### add to /etc/network/interfaces
+### -------------------------------------
+auto eth0
+iface eth0 inet static
+	address 192.168.0.100/24
+	gateway 0.0.0.0
+
+
+### -------------------------------------
+### add to /home/pi/.config/lxsession/LXDE-pi/autostart
+### add to /home/pi/.xinitrc
+### -------------------------------------
+@lxterminal /home/pi/commutation_matrix/main.py
+
+
+### -------------------------------------
+### add to /boot/config.txt
+### -------------------------------------
+#[enable uart and spi]
+dtparam=spi=on
+enable_uart=1
+
+#[4inch HDMI LCD]
+hdmi_group=2
+hdmi_mode=87
+hdmi_timings=480 0 40 10 80 800 0 13 3 32 0 0 0 60 0 32000000 3
+dtoverlay=ads7846,cs=1,penirq=25,penirq_pull=2,speed=50000,keep_vref_on=0,swapxy=0,pmax=255,xohms=150,xmin=200,xmax=3900,ymin=200,ymax=3900
+display_rotate=3
+hdmi_drive=1
+hdmi_force_hotplug=1
+
+#[move spi_cs_pin to useless pin, and disable pin_8]
+dtoverlay=spi0-cs,cs0_pin=26
+gpio=8=ip
+
+
+### -------------------------------------
+### terminal config
+### -------------------------------------
+git clone https://github.com/waveshare/LCD-show.git
+cd LCD-show/
+chmod +x LCD4-800x480-show
+./LCD4-800x480-show
+
+sudo apt install xinput-calibrator
+
+
+sudo apt update && sudo apt upgrade
+sudo apt install qtdeclarative5-dev qt5-default python3-pyqt5
+
+sudo python3 -m pip install pyqt-builder 
+sudo python3 -m pip install --upgrade pip
+sudo python3 -m pip install pyqt5
+
+sudo rebooot 
+
