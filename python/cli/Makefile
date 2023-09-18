@@ -30,7 +30,7 @@ static: $(source)
 	pylint $^
 
 clean:
-	#rm -rf .venv __pycache__
+	rm -rf .venv __pycache__
 	rm -rf .*_cache .tox
 	rm -rf dist
 	rm -rf requirements.txt

@@ -6,7 +6,7 @@ authors = ["Daniil Zaytsev <zdanil34@gmail.com>"]
 packages = [{include = "src"}]
 
 [tool.poetry.dependencies]
-python = "^3.8.1"
+python = "^3.10"
 
 [tool.poetry.group.dev.dependencies]
 tox = "^4.11.3"
