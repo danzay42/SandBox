@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "my-cli"
+version = "0.1.0"
+description = ""
+authors = ["Daniil Zaytsev <zdanil34@gmail.com>"]
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+tox = "^4.11.3"
+pytest = "^7.4.2"
+pytest-sugar = "^0.9.7"
+mypy = "^1.5.1"
+black = "^23.9.1"
+ruff = "^0.0.290"
+flake8 = "^6.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+my_py_cli = 'src.cli:main'

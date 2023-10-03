@@ -12,7 +12,7 @@ install:
 	poetry install
 
 test:
-	pytest -vvv tests
+	pytest -vvv --tb=no tests
 
 requirements:
 	poetry export -f requirements.txt --output requirements.txt --without-hashes

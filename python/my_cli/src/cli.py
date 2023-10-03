@@ -2,6 +2,7 @@ import argparse
 import sys
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Sequence
 
 
 @dataclass(frozen=True)
@@ -10,15 +11,15 @@ class Arguments:
     file_out: Path | None = None
 
     @classmethod
-    def from_arguments(cls) -> "Arguments":
+    def from_arguments(cls, argv: Sequence[str] | None = None) -> "Arguments":
         parser = argparse.ArgumentParser()
         parser.add_argument("-i", dest="file_in", type=Path)
         parser.add_argument("-o", dest="file_out", type=Path)
-        return cls(**vars(parser.parse_args()))
+        return cls(**vars(parser.parse_args(argv)))
 
 
-def main():
-    args = Arguments.from_arguments()
+def main(argv: Sequence[str] | None = None):
+    args = Arguments.from_arguments(argv)
 
     input_stream = args.file_in.open(encoding="utf-8") if args.file_in else sys.stdin
     output_stream = (
@@ -26,8 +27,10 @@ def main():
     )
 
     for line in input_stream:
-        print(f"processed: {line}", file=output_stream)
+        print(f"processed: {line.strip()}", file=output_stream, flush=True)
+
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

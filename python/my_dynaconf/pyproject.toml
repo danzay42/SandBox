@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "my-dynaconf"
+version = "0.1.0"
+description = ""
+authors = ["Daniil Zaytsev <zdanil34@gmail.com>"]
+packages = [{include = "src"}]
+include = ["config.py", "settings.yaml"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+dynaconf = "^3.2.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

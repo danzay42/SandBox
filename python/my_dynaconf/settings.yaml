@@ -1,0 +1,12 @@
+default:
+  host: 127.0.0.1
+  port: 5555
+debug:
+  host: 127.0.0.2
+  port: 1234
+test:
+  host: 127.0.0.3
+  port: 5050
+prod:
+  host: 127.0.0.4
+  port: 5000
