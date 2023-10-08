@@ -26,6 +26,7 @@ do
 done
 echo "---------"
 
-# Built-in iterable
+# Built-in sequence generator
 echo {-5..5}
 echo {a..z}
+seq 10
