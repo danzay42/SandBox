@@ -4,13 +4,14 @@ version = "0.1.0"
 description = ""
 authors = ["Daniil Zaytsev <zdanil34@gmail.com>"]
 readme = "README.md"
+packages = [{include = "my_telebot"}]
+include = ["config.py", "settings.yaml"]
+
 
 [tool.poetry.dependencies]
-python = "^3.10"
-aiogram = "^2.23.1"
-psycopg = {extras = ["binary"], version = "^3.1.4"}
-SQLAlchemy = "^1.4.45"
-psycopg2-binary = "^2.9.5"
+python = "^3.11"
+dynaconf = "^3.2.3"
+aiogram = "^3.1.1"
 
 
 [build-system]

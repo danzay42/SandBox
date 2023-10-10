@@ -1,7 +1,7 @@
 version: '3'
 services:
   back:
-    build: .
+    build: ..
     depends_on: 
       - db
     volumes:
