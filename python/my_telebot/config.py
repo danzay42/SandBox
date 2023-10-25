@@ -1,10 +1,16 @@
-
 from dynaconf import Dynaconf
+from pydantic import BaseModel
+
+
+class Settings(BaseModel):
+    NAME: str
+    API_ID: int
+    API_HASH: str
+    TOKEN: str
+
 
 settings = Dynaconf(
-    envvar_prefix="DYNACONF",
+    envvar_prefix="TELEBOT",
     settings_files=['settings.yaml', '.secrets.yaml'],
 )
-
-# `envvar_prefix` = export envvars with `export DYNACONF_FOO=bar`.
-# `settings_files` = Load these files in the order.
+settings = Settings(**settings.as_dict())
