@@ -18,7 +18,7 @@ Code examples, docs, links, etc.
 ## Build tools
 [earthly](https://earthly.dev/) makefile+dokerfile+bash+...
 [gradle](https://gradle.org/) groovy | kotlin
-[meson](https://mesonbuild.com/) python
+[meson](https://mesonbuild.com/) python + [ninja core](https://ninja-build.org/)
 
 ##
 [vm container](https://github.com/kata-containers/)
