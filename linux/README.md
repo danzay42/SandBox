@@ -1,4 +1,6 @@
-# POSIX System
+# GNU Utils
+
+#  Core utils
 - lsblk | lscpu | lspci | lsusb | ...
 - fuser
 - type | which  | command | hash
@@ -6,6 +8,8 @@
 - strace | rtrace | autrace
 - watch
 - time -> [hyperfine](https://github.com/sharkdp/hyperfine)
+- grep -> [ugrep](https://github.com/Genivia/ugrep)
+- [core utils in rust](https://github.com/uutils/coreutils)
 
 ### Shells
 - sh -> bash -> zsh -> [fish](https://fishshell.com/)
@@ -20,7 +24,9 @@ fzf -> dmenu -> [rofi](https://github.com/davatorium/rofi)
 
 ## Files
 - echo | printf
-- zathura (pdf-reader)
+
+### pdf-reader
+- [zathura](https://pwmt.org/projects/zathura/) -> [zaread](https://github.com/paoloap/zaread)
 
 ## File System (FS)
 - ls -> [exa](https://github.com/ogham/exa) | [lsd](https://github.com/lsd-rs/lsd)
@@ -120,6 +126,8 @@ C --> firewalld & nft
 ### Network File System
 - smb (sumba)
 - nfs (nfs-utils)
+### Bluetooth
+- [tui_manager](https://github.com/darkhz/bluetuith)
 
 ## Sound
 ```mermaid
