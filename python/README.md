@@ -14,6 +14,8 @@
 - datetime -> [pendulum](https://pendulum.eustace.io/)
 - [result monada](https://github.com/rustedpy/result)
 - [pypdf](https://pypdf2.readthedocs.io/en/3.0.0/)
+- [dependency injection](https://github.com/sfermigier/awesome-dependency-injection-in-python)
+- [distributed systems](https://github.com/bakwc/PySyncObj)
 
 ### print
 - print
@@ -73,6 +75,8 @@ isort + black
 - [Sphinx](https://www.sphinx-doc.org/en/master/)
 - [Doxygen](https://www.doxygen.nl/manual/docblocks.html)
 ### build & publish
+https://python-packaging.readthedocs.io/en/latest/#
+
 build + [twine](https://twine.readthedocs.io/en/stable/)
 - [setup-py-upgrade](https://github.com/asottile/setup-py-upgrade)
 - [setup-cfg-fmt](https://github.com/asottile/setup-cfg-fmt)
