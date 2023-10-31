@@ -15,13 +15,14 @@ Code examples, docs, links, etc.
 [backend](https://github.com/pocketbase/pocketbase)
 [local wiki](https://help.obsidian.md/Home)
 
-## Build tools
+## [Build tools](http://lostapp.ru/soft/gnu-make)
 [earthly](https://earthly.dev/) makefile+dokerfile+bash+...
 [gradle](https://gradle.org/) groovy | kotlin
 [meson](https://mesonbuild.com/) python + [ninja core](https://ninja-build.org/)
 
-##
+---
 [vm container](https://github.com/kata-containers/)
 [web echo page](http://termbin.com/)
 [free domain](https://freemyip.com/)
 [server-free file sync](https://syncthing.net/)
+[tokei](https://github.com/XAMPPRocky/tokei)
