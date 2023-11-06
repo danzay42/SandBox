@@ -20,6 +20,11 @@ type barUser struct {
 	Bar string `json:"bar"`
 }
 
+type compexUser struct {
+	User user   `json:"user"`
+	Data string `json:"data"`
+}
+
 func check(data string, v any) {
 	json.Unmarshal([]byte(data), &v)
 	fmt.Printf("%#v\n", v)
@@ -30,12 +35,19 @@ func main() {
 		"id": 1,
 		"name": "foo",
 		"foo": "...foo..."
-		}`
-
-	b := `{"id": 2,
+	}`
+	b := `{
+		"id": 2,
 		"name": "bar",
 		"bar": "...bar..."
-		}`
+	}`
+	c := `{
+		"user": {
+			"id": 3,
+			"name": "complex"
+		},
+		"data": "..."
+	}`
 
 	u := user{}
 	u_foo := fooUser{}
@@ -49,4 +61,6 @@ func main() {
 	check(b, &u_foo)
 	check(b, &u_bar)
 
+	u_complex := compexUser{}
+	check(c, &u_complex)
 }
