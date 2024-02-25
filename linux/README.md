@@ -113,7 +113,7 @@ C --> firewalld & nft
 - [auto-cpufreq](https://github.com/AdnanHodzic/auto-cpufreq)
 
 ## Network
-- wget -> curl -> [httpie](https://httpie.io/docs/cli/main-features)
+- wget -> curl
 - ping | traceroute
 - nslookup
 - ss

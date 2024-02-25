@@ -14,6 +14,8 @@ Code examples, docs, links, etc.
 [devcontainers](https://containers.dev/)
 [testcontainers](https://testcontainers.com/)
 
+curl -> [httpie](https://httpie.io/docs/cli/main-features)
+[grpcurl](https://github.com/fullstorydev/grpcurl)
 [jq](https://jqlang.github.io/jq/)
 [yq](https://mikefarah.gitbook.io/yq/)
 

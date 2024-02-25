@@ -27,9 +27,17 @@
 - [egui](https://crates.io/crates/egui): Egui (pronounced "e-gooey") is a simple, fast, and highly portable immediate mode GUI library for Rust. egui runs on the web, natively, and in your favorite game engine (or will soon).
 
 ## UI
+### desktop
 - [slint](https://slint.dev/)
+- [tauri](https://tauri.app/)
+### web 
+- [yew](https://yew.rs/)
+
+## Web
+- [Rocket](https://rocket.rs/)
 
 ## DB
+- [surrealdb](https://surrealdb.com/)
 ### Database Drivers
 - postgres: A native, synchronous PostgreSQL client.
 - postgres + tokio: An asinc PostgreSQL client.
