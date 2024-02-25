@@ -16,6 +16,7 @@
 - [pypdf](https://pypdf2.readthedocs.io/en/3.0.0/)
 - [dependency injection](https://github.com/sfermigier/awesome-dependency-injection-in-python)
 - [distributed systems](https://github.com/bakwc/PySyncObj)
+- [rust integration](https://github.com/PyO3/maturin)
 
 ### print
 - print
@@ -44,8 +45,9 @@
 - [scipy](https://scipy.org/)
 - [pandas](https://pandas.pydata.org/)
 
-### http framework
+### http servers/clients
 - [fastapi](https://fastapi.tiangolo.com/)
+- [requests](https://requests.readthedocs.io/en/latest/)
 - [aiohttp](https://docs.aiohttp.org/en/stable/)
 - [httpx](https://www.python-httpx.org/)
 

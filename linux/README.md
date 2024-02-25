@@ -10,6 +10,7 @@
 - time -> [hyperfine](https://github.com/sharkdp/hyperfine)
 - grep -> [ugrep](https://github.com/Genivia/ugrep)
 - [core utils in rust](https://github.com/uutils/coreutils)
+- xargs | [parallel](https://www.gnu.org/software/parallel/)
 
 ### Shells
 - sh -> bash -> zsh -> [fish](https://fishshell.com/)

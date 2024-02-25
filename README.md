@@ -10,7 +10,14 @@ Code examples, docs, links, etc.
 [licence](https://choosealicense.com/)
 [12factor](https://12factor.net/)
 
-## Parts
+## DevTools
+[devcontainers](https://containers.dev/)
+[testcontainers](https://testcontainers.com/)
+
+[jq](https://jqlang.github.io/jq/)
+[yq](https://mikefarah.gitbook.io/yq/)
+
+## Application Parts
 [authentication](https://github.com/authorizerdev/authorizer)
 [backend](https://github.com/pocketbase/pocketbase)
 [local wiki](https://help.obsidian.md/Home)
