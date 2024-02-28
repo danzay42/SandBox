@@ -13,7 +13,7 @@ import (
 )
 
 func main() {
-	fx.New(
+	options := fx.Module("myModule",
 		fx.Provide(
 			NewHttpServer,
 			fx.Annotate(
@@ -25,7 +25,9 @@ func main() {
 			NewLogger,
 		),
 		fx.Invoke(func(*http.Server) {}),
-	).Run()
+	)
+	app := fx.New(options)
+	app.Run()
 }
 
 func AsRoute(f any) any {
