@@ -30,11 +30,14 @@
 ### desktop
 - [slint](https://slint.dev/)
 - [tauri](https://tauri.app/)
+- [dioxus](https://dioxuslabs.com/)
 ### web 
 - [yew](https://yew.rs/)
 
 ## Web
 - [Rocket](https://rocket.rs/)
+- [axum](https://github.com/tokio-rs/axum)
+- [warp](https://github.com/seanmonstar/warp)
 
 ## DB
 - [surrealdb](https://surrealdb.com/)
