@@ -93,7 +93,8 @@ isort + black
 ### build & publish
 https://python-packaging.readthedocs.io/en/latest/#
 
-build + [twine](https://twine.readthedocs.io/en/stable/)
+- build: [hatch](https://github.com/pypa/hatch)
+- publish: [twine](https://twine.readthedocs.io/en/stable/)
 - [setup-py-upgrade](https://github.com/asottile/setup-py-upgrade)
 - [setup-cfg-fmt](https://github.com/asottile/setup-cfg-fmt)
 
