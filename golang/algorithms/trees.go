@@ -267,29 +267,3 @@ func maxPathSum(root *TreeNode) int {
 	}
 	return max(maxPath, dfs(root))
 }
-
-func main() {
-	root := &TreeNode{
-		Val: -10,
-		Left: &TreeNode{
-			Val:   9,
-			Left:  nil,
-			Right: nil,
-		},
-		Right: &TreeNode{
-			Val: 20,
-			Left: &TreeNode{
-				Val:   15,
-				Left:  nil,
-				Right: nil,
-			},
-			Right: &TreeNode{
-				Val:   7,
-				Left:  nil,
-				Right: nil,
-			},
-		},
-	}
-
-	fmt.Println(maxPathSum(root))
-}
