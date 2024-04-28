@@ -1,14 +1,9 @@
 package main
 
 import (
-	"fmt"
 	"sort"
 	"strconv"
 )
-
-func main() {
-	fmt.Println(carFleet(12, []int{10, 8, 0, 5, 3}, []int{2, 4, 1, 1, 3}))
-}
 
 func isValid(s string) bool {
 	brackets := map[rune]rune{'(': ')', '{': '}', '[': ']'}
@@ -104,7 +99,7 @@ func dailyTemperatures(temperatures []int) []int {
 	return result
 }
 
-// n*log(n)
+// nums*log(nums)
 func carFleetWithSort(target int, position []int, speed []int) int {
 	cars := make([]struct {
 		pos   int
@@ -138,7 +133,7 @@ func carFleetWithSort(target int, position []int, speed []int) int {
 	return res
 }
 
-// n*m
+// nums*m
 func carFleet(target int, position []int, speed []int) int {
 	time := make([]float64, target+1)
 	for i := range position {
@@ -157,6 +152,27 @@ func carFleet(target int, position []int, speed []int) int {
 			res++
 			slowest = t
 		}
+	}
+	return res
+}
+
+func largestRectangleArea(heights []int) int {
+	var stack [][2]int
+	heights = append(heights, 0)
+
+	res := 0
+	for i, h := range heights {
+		l := i
+		for j := len(stack) - 1; j >= 0 && stack[j][1] > h; j-- {
+			l = stack[j][0]
+			res = max(res, stack[j][1]*(i-l))
+			stack = stack[:len(stack)-1]
+		}
+
+		if h == 0 {
+			continue
+		}
+		stack = append(stack, [2]int{l, h})
 	}
 	return res
 }
