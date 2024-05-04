@@ -212,7 +212,7 @@ func buildTree(preorder []int, inorder []int) *TreeNode {
 
 type Codec struct{}
 
-func Constructor() Codec { return Codec{} }
+func newCodec() Codec { return Codec{} }
 
 func (this *Codec) serialize(root *TreeNode) string {
 	var result []string
