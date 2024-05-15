@@ -14,6 +14,7 @@
 - datetime -> [pendulum](https://pendulum.eustace.io/)
 - [result monada](https://github.com/rustedpy/result)
 - [pypdf](https://pypdf2.readthedocs.io/en/3.0.0/)
+- [python-dependency-injector](https://github.com/ets-labs/python-dependency-injector/)
 - [dependency injection](https://github.com/sfermigier/awesome-dependency-injection-in-python)
 - [distributed systems](https://github.com/bakwc/PySyncObj)
 - [rust integration](https://github.com/PyO3/maturin)
@@ -27,6 +28,16 @@
 - logging
 - [loguru](https://github.com/Delgan/loguru)
 
+### decorators
+- [retry](https://github.com/invl/retry)
+- [cache,lru_cache](https://docs.python.org/3/library/functools.html)
+- [deprecated](https://docs.python.org/3/library/warnings.html)
+- [atexit](https://docs.python.org/3/library/atexit.html)
+
+### asynchrony
+- [asyncio](https://docs.python.org/3/library/asyncio.html)
+- [gevent](https://www.gevent.org/)
+
 ### cli framework
 - [argparse](https://docs.python.org/3/library/argparse.html)
 - [click](https://palletsprojects.com/p/click/)
@@ -36,9 +47,12 @@
 - [dataclasses](https://docs.python.org/3/library/dataclasses.html)
 - [pydantic](https://docs.pydantic.dev/latest/)
 
-### sql
+### database abstraction
 - [SQLAlchemy](https://www.sqlalchemy.org/)
 - [SQLModel](https://sqlmodel.tiangolo.com/)
+
+### message broker abstraction
+- [Kombu](https://github.com/celery/kombu)
 
 ### data
 - [numpy](https://numpy.org/)
@@ -50,6 +64,7 @@
 - [requests](https://requests.readthedocs.io/en/latest/)
 - [aiohttp](https://docs.aiohttp.org/en/stable/)
 - [httpx](https://www.python-httpx.org/)
+- [falcon](https://github.com/falconry/falcon) + [gevent](https://www.gevent.org/)
 
 ### ui
 - [textual](https://github.com/Textualize/textual)
@@ -85,6 +100,20 @@ isort + black
 - [unittest](https://docs.python.org/3/library/unittest.html) + [pytest](https://docs.pytest.org/en/7.2.x/contents.html) + [tox](https://tox.wiki/en/latest/)
 - [fakedb](https://github.com/emirozer/fake2db)
 - [mimesis](https://github.com/lk-geimfari/mimesis)
+
+### audit
+- [safety](https://github.com/pyupio/safety)
+- [pyscan](https://github.com/paulscherrerinstitute/pyscan)
+- [pip-audit](https://github.com/pypa/pip-audit)
+
+- [deptry](https://github.com/fpgmaas/deptry) - implicit dependency
+- [vulture](https://github.com/jendrikseipp/vulture) - dead code
+- [wily](https://github.com/tonybaloney/wily) - code simplicity
+- [impulse](https://github.com/seddonym/impulse) - code graph
+
+- [grimp](https://github.com/seddonym/grimp) - import control
+- [import-linter](https://github.com/seddonym/import-linter) - import control wrapper
+- [pytest-archon](https://github.com/jwbargsten/pytest-archon) - arch control
 
 ### documentation
 - [Sphinx](https://www.sphinx-doc.org/en/master/)

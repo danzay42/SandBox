@@ -1,7 +1,6 @@
 import asyncio
 import logging
 import sys
-from config import settings
 from typing import Any, Dict
 
 from aiogram import Bot, Dispatcher, F, Router, html
@@ -13,10 +12,10 @@ from aiogram.types import (
     KeyboardButton,
     Message,
     ReplyKeyboardMarkup,
-    ReplyKeyboardRemove,
-    MenuButton
+    ReplyKeyboardRemove
 )
 
+from config import settings
 
 form_router = Router()
 

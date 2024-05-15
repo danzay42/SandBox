@@ -1,6 +1,10 @@
+# Distributives
+- [artix](https://artixlinux.org/)
+- [alt](https://www.altlinux.org/)
+
 # GNU Utils
 
-#  Core utils
+## Core utils
 - lsblk | lscpu | lspci | lsusb | ...
 - fuser
 - type | which  | command | hash
@@ -116,7 +120,6 @@ C --> firewalld & nft
 - wget -> curl
 - ping | traceroute
 - nslookup
-- ss
 - ip
 - nc (netcat)
 - dig -> [dog](https://github.com/ogham/dog)
@@ -124,6 +127,12 @@ C --> firewalld & nft
 - iwd | wpa_supplicant | nmcli -> nmtui
 - ssh | scp | sftp | ssh-keygen | ssh-copy-id | ...
 	`/etc/ssh/.` -> `~/.ssh/.`
+### Open ports
+- ss
+- netstat
+- lsof
+- nmap
+- `/etc/services`
 ### Network File System
 - smb (sumba)
 - nfs (nfs-utils)
