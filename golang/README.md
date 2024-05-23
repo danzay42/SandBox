@@ -9,7 +9,12 @@
 - [RAFT](https://github.com/lni/dragonboat)
 - [copier](https://github.com/jinzhu/copier)
 ## Http servers
-- [net/http](https://pkg.go.dev/net/http) + [routegroup](https://github.com/go-pkgz/routegroup)
+- [net/http](https://pkg.go.dev/net/http)
+  - middleware
+  - subrouting, [routegroup](https://github.com/go-pkgz/routegroup)
+  - path parameters
+  - http methods
+  - passing down context
 - [gin](https://github.com/gin-gonic/gin)
 - [echo](https://github.com/labstack/echo)
 - [fiber](https://github.com/gofiber/fiber)
