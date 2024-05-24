@@ -18,6 +18,7 @@
 - [dependency injection](https://github.com/sfermigier/awesome-dependency-injection-in-python)
 - [distributed systems](https://github.com/bakwc/PySyncObj)
 - [rust integration](https://github.com/PyO3/maturin)
+- [cantok](https://github.com/pomponchik/cantok)
 
 ### print
 - print
@@ -58,6 +59,10 @@
 - [numpy](https://numpy.org/)
 - [scipy](https://scipy.org/)
 - [pandas](https://pandas.pydata.org/)
+- [polar](https://www.pola.rs/)
+- [xarrays](https://github.com/pydata/xarray)
+- [matplotlib](https://matplotlib.org/)
+- [seaborn](https://seaborn.pydata.org/tutorial/introduction.html)
 
 ### http servers/clients
 - [fastapi](https://fastapi.tiangolo.com/)
@@ -65,6 +70,10 @@
 - [aiohttp](https://docs.aiohttp.org/en/stable/)
 - [httpx](https://www.python-httpx.org/)
 - [falcon](https://github.com/falconry/falcon) + [gevent](https://www.gevent.org/)
+
+### config
+- [dotenv](https://saurabh-kumar.com/python-dotenv/)
+- [dynaconf](https://github.com/dynaconf/dynaconf)
 
 ### ui
 - [textual](https://github.com/Textualize/textual)
