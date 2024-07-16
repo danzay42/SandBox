@@ -35,6 +35,7 @@
 ## [ORM](https://github.com/d-tsuji/awesome-go-orms)
 - [gorm](https://github.com/go-gorm/gorm)
 - [beego](https://github.com/beego/beego)
+- [squirrel](https://github.com/Masterminds/squirrel)
 
 
 ## MQ,KV,Cache

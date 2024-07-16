@@ -23,6 +23,7 @@ Code examples, docs, links, etc.
 ## Dev Tools
 - [devcontainers](https://containers.dev/)
 - [testcontainers](https://testcontainers.com/)
+- [scriptisto](https://github.com/igor-petruk/scriptisto)
 
 - [curl](linux/curl.md) -> [httpie](https://httpie.io/docs/cli/main-features)
 - [grpcurl](https://github.com/fullstorydev/grpcurl)

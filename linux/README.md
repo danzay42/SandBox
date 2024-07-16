@@ -19,6 +19,8 @@
 ### Shells
 - sh -> bash -> zsh -> [fish](https://fishshell.com/)
 - jobs | bg | fg
+### Search
+find -> fd
 ### Super Search
 fzf -> dmenu -> [rofi](https://github.com/davatorium/rofi)
 ### Docs

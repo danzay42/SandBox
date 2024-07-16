@@ -2,6 +2,7 @@
 - [PEPS](https://peps.python.org/)
 - [pypa](https://www.pypa.io/en/latest/)
 - [pypa-projects](https://packaging.python.org/en/latest/key_projects/#pypa-projects)
+- [google styple guide](https://google.github.io/styleguide/pyguide.html)
 
 ## CheatSheets
 - [pythoncheatsheet](https://www.pythoncheatsheet.org/)
