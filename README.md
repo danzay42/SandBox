@@ -9,7 +9,6 @@ Code examples, docs, links, etc.
 - [versioning](https://semver.org/) + [control](https://github.com/peritus/bumpversion)
 - [cangelog](https://keepachangelog.com/)
 - [gitignore](https://docs.gitignore.io/)
-
 - [languages benchmarks](https://benchmarksgame-team.pages.debian.net/benchmarksgame/index.html)
 
 ## Learn
@@ -19,16 +18,20 @@ Code examples, docs, links, etc.
 - [Programming-Idioms](https://programming-idioms.org/cheatsheets)
 - [Learn X in Y minutes](https://learnxinyminutes.com/)
 - [design-patterns](https://refactoring.guru/ru/design-patterns/catalog)
+- [app-from-scratch-book](https://app-from-scratch.darkleaf.ru/index.html)
 
 ## Dev Tools
 - [devcontainers](https://containers.dev/)
 - [testcontainers](https://testcontainers.com/)
 - [scriptisto](https://github.com/igor-petruk/scriptisto)
-
 - [curl](linux/curl.md) -> [httpie](https://httpie.io/docs/cli/main-features)
 - [grpcurl](https://github.com/fullstorydev/grpcurl)
 - [jq](https://jqlang.github.io/jq/)
 - [yq](https://mikefarah.gitbook.io/yq/)
+- [k3s](https://docs.k3s.io/)
+- [dbeaver](https://dbeaver.io/)
+- [k6](https://k6.io/)/[k6-github](https://github.com/grafana/k6) - load test
+- [pentestmonkey](https://pentestmonkey.net/) - test/debug tools/cheatsheets
 
 ## [Build Tools](http://lostapp.ru/soft/gnu-make)
 - [earthly](https://earthly.dev/) makefile+dokerfile+bash+...
@@ -46,11 +49,16 @@ Code examples, docs, links, etc.
 ## Licence
 - [Choose an open source license](https://choosealicense.com/)
 - [License List](https://spdx.org/licenses/)
+### Certifiacte
+- [base instuction](https://zalinux.ru/?p=4174)
 
 ## Application Parts
 - [authentication](https://github.com/authorizerdev/authorizer)
 - [backend](https://github.com/pocketbase/pocketbase)
 - [local wiki](https://help.obsidian.md/Home)
+
+## FaaS
+- [OpenFaaS](https://github.com/openfaas/faas)
 
 # etc
 - [super-compilation](https://github.com/jart/cosmopolitan)
@@ -61,3 +69,4 @@ Code examples, docs, links, etc.
 - [tokei](https://github.com/XAMPPRocky/tokei)
 - [smart home](https://esphome.io/)
 - [home assistant](https://www.home-assistant.io/)
+- [windows shell](https://github.com/nushell/nushell)

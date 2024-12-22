@@ -136,6 +136,7 @@ https://python-packaging.readthedocs.io/en/latest/#
 - publish: [twine](https://twine.readthedocs.io/en/stable/)
 - [setup-py-upgrade](https://github.com/asottile/setup-py-upgrade)
 - [setup-cfg-fmt](https://github.com/asottile/setup-cfg-fmt)
+- [awesome-pyproject](https://github.com/carlosperate/awesome-pyproject)
 
 ### compiler
 [nuitka](https://nuitka.net/)

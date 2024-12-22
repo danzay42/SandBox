@@ -2,12 +2,17 @@
 - [100 go mistakes](https://100go.co/)
 - [Uber Style Guide](https://github.com/sau00/uber-go-guide-ru/blob/master/style.md)
 - [Goggle Style Guide](https://google.github.io/styleguide/go/best-practices)
+- [Practical Go](https://dave.cheney.net/practical-go)
 - [Patterns](https://github.com/AlexanderGrom/go-patterns)
+- [Go by Example](https://gobyexample.com/)
+- [GC Guide](https://tip.golang.org/doc/gc-guide)
+- [DevDocs](https://go.dev/doc/)
 
 # Dependencies
-- [samber](https://github.com/samber)
+- [**awesome-go**](https://github.com/avelino/awesome-go)/[awesome-go-web](https://go.libhunt.com/)
+- [samber](https://github.com/samber) - базовые инструменты разработки
+- [copier](https://github.com/jinzhu/copier) - базовый инструмент мапинга структур
 - [RAFT](https://github.com/lni/dragonboat)
-- [copier](https://github.com/jinzhu/copier)
 ## Http servers
 - [net/http](https://pkg.go.dev/net/http)
   - middleware
@@ -15,9 +20,10 @@
   - path parameters
   - http methods
   - passing down context
+- fasthttp
+- [fiber](https://github.com/gofiber/fiber)
 - [gin](https://github.com/gin-gonic/gin)
 - [echo](https://github.com/labstack/echo)
-- [fiber](https://github.com/gofiber/fiber)
 - [chi](https://github.com/go-chi/chi)
 ## Logging
 - [slog](https://github.com/gookit/slog)
@@ -27,6 +33,7 @@
 - [slog-formatter](https://github.com/samber/slog-formatter)
 ## Config
 - [viper](https://github.com/spf13/viper)
+- [envconfig](https://github.com/kelseyhightower/envconfig)
 ## CLI
 - [cobra](https://github.com/spf13/cobra)
 ## DI
@@ -36,12 +43,16 @@
 - [gorm](https://github.com/go-gorm/gorm)
 - [beego](https://github.com/beego/beego)
 - [squirrel](https://github.com/Masterminds/squirrel)
-
-
+## Documentation
+- [pkgsite](https://pkg.go.dev/golang.org/x/pkgsite/cmd/pkgsite)
 ## MQ,KV,Cache
 - Redis
+- Memcache
 - [NATSio](https://nats.io/)
 - [pebble](https://github.com/cockroachdb/pebble)
+## Kuber Framework
+- [kubebuilder](https://book.kubebuilder.io/)
+- [operatorframework](https://operatorframework.io/)
 
 # Tools
 - `go generate`
@@ -57,6 +68,7 @@
 - [go tool pprof](https://github.com/google/pprof)
 - [goenv](https://github.com/drewgonzales360/goenv)
 - [mokery](https://github.com/vektra/mockery)
+- [nil check linter](https://github.com/uber-go/nilaway)
 
 # Templates
 - [go-template](https://github.com/exepirit/go-template)
@@ -76,4 +88,4 @@
 `/internal/services`  
 ### CQS layout
 `/internal/commands`  
-`/internal/queries`  
+`/internal/queries`
