@@ -10,11 +10,14 @@ Code examples, docs, links, etc.
 - [cangelog](https://keepachangelog.com/)
 - [gitignore](https://docs.gitignore.io/)
 - [languages benchmarks](https://benchmarksgame-team.pages.debian.net/benchmarksgame/index.html)
+- [Cloud Native Landscape](https://landscape.cncf.io/)
 
 ## Learn
 - [roadmap](https://roadmap.sh/)
 - [Learn Programming By Example](https://www.learnbyexample.org/)
 - [METANIT.COM](https://metanit.com/)
+- [OpenNET](https://www.opennet.ru/)
+- [devdocs](https://devdocs.io/)
 - [Programming-Idioms](https://programming-idioms.org/cheatsheets)
 - [Learn X in Y minutes](https://learnxinyminutes.com/)
 - [design-patterns](https://refactoring.guru/ru/design-patterns/catalog)
@@ -65,6 +68,16 @@ Code examples, docs, links, etc.
 
 ## Security Tools
 - [security scanner](https://github.com/aquasecurity/trivy)
+
+# Docker
+- [cheatsheet](https://dockerlabs.collabnix.com/docker/cheatsheet/)
+- [docker cheatsheet](https://docs.docker.com/get-started/docker_cheatsheet.pdf)
+- [docker-compose cheatsheet](https://devhints.io/docker-compose)
+- [docker hub](https://hub.docker.com/)
+- [docker hub ru-proxy](https://huecker.io/)
+- [colima](https://github.com/abiosoft/colima)
+- [rootless docker](https://docs.docker.com/engine/security/rootless/)
+- [k8s docs](https://kubernetes.io/docs/home/)
 
 # etc
 - [super-compilation](https://github.com/jart/cosmopolitan)

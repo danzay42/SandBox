@@ -7,6 +7,7 @@
 - [Go by Example](https://gobyexample.com/)
 - [GC Guide](https://tip.golang.org/doc/gc-guide)
 - [DevDocs](https://go.dev/doc/)
+- [An Introduction to Programming in Go](https://www.golang-book.com/books/intro)
 
 # Dependencies
 - [**awesome-go**](https://github.com/avelino/awesome-go)/[awesome-go-web](https://go.libhunt.com/)
@@ -47,7 +48,7 @@
 ## Documentation
 - [pkgsite](https://pkg.go.dev/golang.org/x/pkgsite/cmd/pkgsite)
 ## MQ,KV,Cache
-- Redis
+- [Redis](https://redis.io/)
 - Memcache
 - [NATSio](https://nats.io/)
 - [pebble](https://github.com/cockroachdb/pebble)
