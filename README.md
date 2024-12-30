@@ -4,7 +4,7 @@ Code examples, docs, links, etc.
 
 - [IETF standards](https://datatracker.ietf.org/)
 - [12factor](https://12factor.net/)
-- [git](https://git-scm.com/doc)
+- [git](https://git-scm.com/doc) + [visualization](https://github.com/git-school/visualizing-git?tab=readme-ov-file)
 - [commits](https://www.conventionalcommits.org)
 - [versioning](https://semver.org/) + [control](https://github.com/peritus/bumpversion)
 - [cangelog](https://keepachangelog.com/)
@@ -25,13 +25,16 @@ Code examples, docs, links, etc.
 - [testcontainers](https://testcontainers.com/)
 - [scriptisto](https://github.com/igor-petruk/scriptisto)
 - [curl](linux/curl.md) -> [httpie](https://httpie.io/docs/cli/main-features)
-- [grpcurl](https://github.com/fullstorydev/grpcurl)
+- [grpcurl](https://github.com/fullstorydev/grpcurl) | [grpc_cli](https://github.com/grpc/grpc/blob/master/doc/command_line_tool.md)
 - [jq](https://jqlang.github.io/jq/)
 - [yq](https://mikefarah.gitbook.io/yq/)
 - [k3s](https://docs.k3s.io/)
 - [dbeaver](https://dbeaver.io/)
+
+## Test Tools
 - [k6](https://k6.io/)/[k6-github](https://github.com/grafana/k6) - load test
 - [pentestmonkey](https://pentestmonkey.net/) - test/debug tools/cheatsheets
+- [yandex_tank](https://yandextank.readthedocs.io/en/latest/) - stres tests
 
 ## [Build Tools](http://lostapp.ru/soft/gnu-make)
 - [earthly](https://earthly.dev/) makefile+dokerfile+bash+...
@@ -60,6 +63,9 @@ Code examples, docs, links, etc.
 ## FaaS
 - [OpenFaaS](https://github.com/openfaas/faas)
 
+## Security Tools
+- [security scanner](https://github.com/aquasecurity/trivy)
+
 # etc
 - [super-compilation](https://github.com/jart/cosmopolitan)
 - [vm container](https://github.com/kata-containers/)
@@ -70,3 +76,4 @@ Code examples, docs, links, etc.
 - [smart home](https://esphome.io/)
 - [home assistant](https://www.home-assistant.io/)
 - [windows shell](https://github.com/nushell/nushell)
+- [whireshark for mac](https://proxyman.io/)
