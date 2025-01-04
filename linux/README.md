@@ -21,9 +21,7 @@
 - sh -> bash -> zsh -> [fish](https://fishshell.com/)
 - jobs | bg | fg
 ### Search
-find -> fd
-### Super Search
-fzf -> dmenu -> [rofi](https://github.com/davatorium/rofi)
+find -> fd -> fzf
 ### Docs
 - apropos (search manual pages) | `man -k` | `man --apropos`
 - man | info | help (shell specific)  -> [batman](https://github.com/eth-p/bat-extras/blob/master/doc/batman.md)

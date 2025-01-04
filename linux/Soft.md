@@ -1,42 +1,68 @@
 # Tiling window manager
 ---
-
 - [i3](https://i3wm.org/)
 - [qtile](https://qtile.org/) (python)
 - [hyprland](https://wiki.hyprland.org/)
+- [bspwm](https://github.com/baskerville/bspwm)
 
-## Status Bar
-- **polybar**
+## Display
+- xrandr
+### Status Bar
+- waybar
+- nwg-panel
+- polybar
 - xmobar
-## Volume Control
+### Notify
+- mako
+- dunst
+	```sh
+	notify-send
+	dunstify
+	```
+### Wallpapers
+- nitrogen
+- **feh**
+- swaybg
+- swww
+- hyprpaper
+### LockScreen
+- hyperlock
+- swaylock
+### Dock
+- nwg-dock
+### Widgets
+- ags
+- eww
+
+## Control
+### Volume Control
 - amixer
 - alsamixer
 - pamixer
-## Keyboard
+### Brightness
+- xbacklight -> brillo
+- light
+- clight
+### Keyboard
 - sxhkd
 - setxkbmap
+### Power
+- hypridle
+
+## Launcher
+- wofi
+- [rofi](https://github.com/davatorium/rofi)
+- dmenu
+
 ## Screenshot
-- scrot -> **flameshot**
-## Display
-- xrandr
+- scrot -> [flameshot](https://github.com/flameshot-org/flameshot)
+- grimblast
+- grim+slurp
+
 ## Compositor
 - xcompmgr
 - compiz
 - picom
-## Brightness
-- xbacklight -> brillo
-- light
-- clight
-## Wallpapers
-- nitrogen
-- **feh**
-## Notify
-- dunst
-```sh
-notify-send
-dunstify
-```
-
 
 
 # Soft
@@ -70,8 +96,8 @@ https://github.com/ryanoasis/nerd-fonts#glyph-sets
 
 ### Plugins & utils:
 Lazy (all plugins)-> Mason (nice lsp plugins)
-- LSP
-- tree-sitter (быстрый и правильный способо подстветки кода)
+- LSPs
+- lexer -> tree-sitter (быстрый и правильный способо подстветки кода)
 - Tagbar (навигация внутри файла)
 - NERDTree
 - Telescope (use: ripgrep, fzf)

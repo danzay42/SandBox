@@ -85,7 +85,7 @@ Code examples, docs, links, etc.
 - [web echo page](http://termbin.com/)
 - [free domain](https://freemyip.com/)
 - [server-free file sync](https://syncthing.net/)
-- [tokei](https://github.com/XAMPPRocky/tokei)
+- [scc(go)](https://github.com/boyter/scc) | [tokei(rust)](https://github.com/XAMPPRocky/tokei)
 - [smart home](https://esphome.io/)
 - [home assistant](https://www.home-assistant.io/)
 - [windows shell](https://github.com/nushell/nushell)
