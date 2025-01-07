@@ -1,8 +1,3 @@
-# Distributives
-- [artix](https://artixlinux.org/)
-- [alt](https://www.altlinux.org/)
-- [linux-hardware](https://linux-hardware.org/)
-
 # GNU Utils
 
 ## Core utils

@@ -1,3 +1,9 @@
+# Distributives
+- [artix](https://artixlinux.org/)
+- [alt](https://www.altlinux.org/)
+- [linux-hardware](https://linux-hardware.org/)
+- [netboot](https://netboot.xyz/)
+
 # Tiling window manager
 ---
 - [i3](https://i3wm.org/)
