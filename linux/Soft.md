@@ -148,6 +148,7 @@ https://suckless.org/
 ## [Git](https://git-scm.com/book/en/v2)
 - [lazygit](https://github.com/jesseduffield/lazygit)
 - [gitui](https://github.com/extrawurst/gitui)
+- [diff-tool](https://github.com/dandavison/delta)
 
 ## Messengers
 [simplex-chat](https://github.com/simplex-chat/simplex-chat)
