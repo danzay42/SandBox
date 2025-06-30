@@ -33,6 +33,7 @@ Code examples, docs, links, etc.
 - [yq](https://mikefarah.gitbook.io/yq/)
 - [k3s](https://docs.k3s.io/)
 - [dbeaver](https://dbeaver.io/)
+- [pgcli](https://github.com/dbcli/pgcli)
 
 ## Test Tools
 - [k6](https://k6.io/)/[k6-github](https://github.com/grafana/k6) - load test

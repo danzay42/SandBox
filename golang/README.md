@@ -45,6 +45,7 @@
 - [gorm](https://github.com/go-gorm/gorm)
 - [beego](https://github.com/beego/beego)
 - [squirrel](https://github.com/Masterminds/squirrel)
+- [pgx](https://github.com/jackc/pgx) postgresql driver
 ## Documentation
 - [pkgsite](https://pkg.go.dev/golang.org/x/pkgsite/cmd/pkgsite)
 ## MQ,KV,Cache
@@ -69,6 +70,11 @@
 - `go install`
 - [go tool pprof](https://github.com/google/pprof)
 - [goenv](https://github.com/drewgonzales360/goenv)
+
+## DevTools
+- [live reloader](https://github.com/air-verse/air)
+- [makefile template](https://www.alexedwards.net/blog/a-time-saving-makefile-for-your-go-projects)
+- [template](https://github.com/Melkeydev/go-blueprint)
 
 # Lint
 - [golangci-lint](https://github.com/golangci/golangci-lint)
