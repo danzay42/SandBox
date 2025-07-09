@@ -31,7 +31,7 @@ Code examples, docs, links, etc.
 - [grpcurl](https://github.com/fullstorydev/grpcurl) | [grpc_cli](https://github.com/grpc/grpc/blob/master/doc/command_line_tool.md)
 - [jq](https://jqlang.github.io/jq/)
 - [yq](https://mikefarah.gitbook.io/yq/)
-- [k3s](https://docs.k3s.io/)
+- [k3s](https://docs.k3s.io/) | [minikube](https://github.com/kubernetes/minikube)
 - [dbeaver](https://dbeaver.io/)
 - [pgcli](https://github.com/dbcli/pgcli)
 

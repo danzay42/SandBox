@@ -15,6 +15,7 @@
 ### Shells
 - sh -> bash -> zsh -> [fish](https://fishshell.com/)
 - jobs | bg | fg
+- [atuin](https://github.com/atuinsh/atuin) - shell history
 ### Search
 find -> fd -> fzf
 ### Docs
@@ -30,6 +31,7 @@ find -> fd -> fzf
 - [zathura](https://pwmt.org/projects/zathura/) -> [zaread](https://github.com/paoloap/zaread)
 
 ## File System (FS)
+- rm -> [rmt](https://github.com/AmineZouitine/rmt.rs)
 - ls -> [exa](https://github.com/ogham/exa) | [lsd](https://github.com/lsd-rs/lsd)
 - tree -> [broot](https://github.com/Canop/broot)
 - [mc](https://midnight-commander.org/wiki)

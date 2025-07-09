@@ -59,6 +59,7 @@
 - wofi
 - [rofi](https://github.com/davatorium/rofi)
 - dmenu
+- [otter-launcher](https://github.com/kuokuo123/otter-launcher)
 
 ## Screenshot
 - scrot -> [flameshot](https://github.com/flameshot-org/flameshot)
