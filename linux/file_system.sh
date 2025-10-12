@@ -24,6 +24,8 @@ split README.md /tmp/README_ # split file to files
 # read bytes
 hexdump /tmp/file
 xxd /tmp/file
+hexyl /tmp/file # hex viewer for terminal https://github.com/sharkdp/hexyl
+
 
 # # ====================================================================
 # # file utils

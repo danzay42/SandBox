@@ -8,6 +8,7 @@
 - [GC Guide](https://tip.golang.org/doc/gc-guide)
 - [DevDocs](https://go.dev/doc/)
 - [An Introduction to Programming in Go](https://www.golang-book.com/books/intro)
+- [Base lang examples](https://github.com/gophertuts/go-basics)
 
 # Dependencies
 - [**awesome-go**](https://github.com/avelino/awesome-go)/[awesome-go-web](https://go.libhunt.com/)

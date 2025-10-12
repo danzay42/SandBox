@@ -103,7 +103,7 @@ C --> firewalld & nft
 ## Processes
 - kill | killall
 - ps -> [procs](https://github.com/dalance/procs)
-- top -> htop -> [btm](https://github.com/ClementTsang/bottom)
+- top -> htop -> [btm](https://github.com/ClementTsang/bottom) -> [btop](https://github.com/aristocratos/btop) -> [neohtop](https://github.com/Abdenasser/neohtop)
 - nvtop
 - [mprocs](https://github.com/pvolok/mprocs)
 - free

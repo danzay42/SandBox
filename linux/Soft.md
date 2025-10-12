@@ -14,9 +14,8 @@
 ## Display
 - xrandr
 ### Status Bar
-- waybar
 - nwg-panel
-- polybar
+- polybar -> waybar
 - xmobar
 ### Notify
 - mako
