@@ -93,6 +93,7 @@
 - [virtualenv](https://virtualenv.pypa.io/en/latest/)
 - [poetry](https://python-poetry.org/)
 - [pyenv](https://github.com/pyenv/pyenv)
+- [uv](https://github.com/astral-sh/uv)
 
 ### formatters
 isort + black
