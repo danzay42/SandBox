@@ -35,5 +35,5 @@ func main() {
 			img.Set(px, py, mandelbrot(z))
 		}
 	}
-	png.Encode(os.Stdout, img) // Примечание: игнорируем ошибки
+	_ = png.Encode(os.Stdout, img) // Примечание: игнорируем ошибки
 }

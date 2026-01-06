@@ -58,3 +58,5 @@ impl Solution {
         }
     }
 }
+
+fn main() {}

@@ -20,7 +20,7 @@ type barUser struct {
 	Bar string `json:"bar"`
 }
 
-type compexUser struct {
+type complexUser struct {
 	User user   `json:"user"`
 	Data string `json:"data"`
 }
@@ -50,17 +50,17 @@ func main() {
 	}`
 
 	u := user{}
-	u_foo := fooUser{}
-	u_bar := barUser{}
+	uFoo := fooUser{}
+	uBar := barUser{}
 
 	check(a, &u)
-	check(a, &u_foo)
-	check(a, &u_bar)
+	check(a, &uFoo)
+	check(a, &uBar)
 
 	check(b, &u)
-	check(b, &u_foo)
-	check(b, &u_bar)
+	check(b, &uFoo)
+	check(b, &uBar)
 
-	u_complex := compexUser{}
-	check(c, &u_complex)
+	uComplex := complexUser{}
+	check(c, &uComplex)
 }

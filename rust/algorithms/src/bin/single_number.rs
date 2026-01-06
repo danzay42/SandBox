@@ -4,3 +4,5 @@ impl Solution {
         return nums.into_iter().reduce(|a, b| a ^ b).unwrap();
     }
 }
+
+fn main() {}

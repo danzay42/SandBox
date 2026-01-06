@@ -46,21 +46,21 @@ func lissajous(w io.Writer) {
 		img := image.NewPaletted(rect, palette)
 		for t := 0.0; t < cycles*2*math.Pi; t += res {
 			x := math.Sin(t)
-			у := math.Sin(t*freq + phase)
-			img.SetColorIndex(size+int(x*size+0.5), size+int(у*size+0.5), blackIndex)
+			y := math.Sin(t*freq + phase)
+			img.SetColorIndex(size+int(x*size+0.5), size+int(y*size+0.5), blackIndex)
 		}
 		phase += 0.1
 		anim.Delay = append(anim.Delay, delay)
 		anim.Image = append(anim.Image, img)
 	}
-	gif.EncodeAll(w, &anim)
+	_ = gif.EncodeAll(w, &anim)
 }
 
 func example2() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		lissajous(w)
 	})
-	http.ListenAndServe(":8000", nil)
+	_ = http.ListenAndServe(":8000", nil)
 }
 
 func main() {
