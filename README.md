@@ -44,6 +44,7 @@ Code examples, docs, links, etc.
 - [earthly](https://earthly.dev/) makefile+dokerfile+bash+...
 - [gradle](https://gradle.org/) groovy | kotlin
 - [meson](https://mesonbuild.com/) python + [ninja core](https://ninja-build.org/)
+- [basel](https://bazel.build/)
 
 ## git hooks
 - [pre-commit](https://github.com/pre-commit/pre-commit)
