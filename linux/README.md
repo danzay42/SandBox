@@ -125,6 +125,8 @@ C --> firewalld & nft
 - iwd | wpa_supplicant | nmcli -> nmtui
 - ssh | scp | sftp | ssh-keygen | ssh-copy-id | ...
 	`/etc/ssh/.` -> `~/.ssh/.`
+- iperf3
+
 ### Open ports
 - ss
 - netstat
