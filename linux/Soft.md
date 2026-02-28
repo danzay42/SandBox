@@ -330,3 +330,30 @@ gnome-extensions enable Vitals@CoreCoding.com
 gnome-extensions enable dash-to-dock@micxgx.gmail.com
 gnome-extensions enable drive-menu@gnome-shell-extensions.gcampax.github.com
 ```
+
+# Personal setup
+```shell
+# Add user flatpack repo
+flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+# Add ru locale
+# uncomment needed in /etc/locale.gen
+sudo locale-gen
+
+# Install and set fish
+sudo pacman -S fish
+chsh -s "(command -v fish)"
+
+# YAY
+sudo pacman -S --needed git base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
+# Install packages
+sudo pacman -S zathura
+yay -S portproton
+
+# Remove unused
+sudo pacman -R gnome-boxes cheese gnome-contacts gnome-maps gnome-photos gnome-music totem gnome-weather epiphany
+```

@@ -80,6 +80,7 @@ Code examples, docs, links, etc.
 - [colima](https://github.com/abiosoft/colima)
 - [rootless docker](https://docs.docker.com/engine/security/rootless/)
 - [k8s docs](https://kubernetes.io/docs/home/)
+- [podman](https://podman.io/)
 
 # etc
 - [super-compilation](https://github.com/jart/cosmopolitan)
