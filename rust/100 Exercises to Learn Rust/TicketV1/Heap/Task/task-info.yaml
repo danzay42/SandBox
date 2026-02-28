@@ -1,0 +1,37 @@
+type: edu
+files:
+  - name: src/lib.rs
+    visible: false
+    learner_created: false
+  - name: Cargo.toml
+    visible: false
+    learner_created: false
+  - name: tests/tests.rs
+    visible: true
+    placeholders:
+      - offset: 365
+        length: 3
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 365
+        initialized_from_dependency: false
+        encrypted_possible_answer: 4u9IE3F99Jcjrxaln91bLA==
+        selected: true
+        status: Solved
+      - offset: 814
+        length: 5
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 821
+        initialized_from_dependency: false
+        encrypted_possible_answer: s+ppChE6sxgIzsfoiQXMOQ==
+        selected: true
+        status: Solved
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 08 Jan 2026 14:06:35 UTC"
+record: -1
